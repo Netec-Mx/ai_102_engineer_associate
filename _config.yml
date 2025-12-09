@@ -1,0 +1,27 @@
+title: Netec Learning Labs
+description: Plataforma de Laboratorios
+# Para project site:
+url: "https://netec-mx.github.io"
+baseurl: "/ai_102_engineer_associate"   # DEFINIR EL NOMBRE DEL REPOSITORIO PARA LAS PRACTICAS
+
+# Nombre completo del repo (owner/repo)
+repository: netec-mx/ai_102_engineer_associate # MISMO NOMBRE QUE EL DE LA LINEA 5
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-github-metadata 
+
+exclude:
+  - .bundle
+  - vendor
+  - node_modules
+  - .github
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+logo: /assets/img/neteclogo.png
+favicon: /assets/img/favicon.ico

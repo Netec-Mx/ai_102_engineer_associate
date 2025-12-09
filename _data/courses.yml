@@ -1,0 +1,51 @@
+# _data/courses.yml
+ai_102_engineer_associate: 
+  title: "AI-102: Microsoft Certified: Azure AI Engineer Associate" 
+  intro: "DESCRIPCIÓN_DEL_CURSO_AQUI"
+  labs:
+      # EJEMPLO
+    - id: lab1
+      title: "Explore machine learning scenarios"
+      url:  "/sims/Instructions/Labs/01-explore-ml"
+      duration: "15 min"
+      # ESTRUCTURA COPIAR Y PEGAR CUANTAS VECES SEA NECESARIO
+    - id: lab2
+      title: "Explore Automated Machine Learning in Azure Machine Learning"
+      url:  "/fundamentals/Instructions/Exercises/01-machine-learning"
+      duration: "35 min"
+    - id: lab3
+      title: "Explore a generative AI agent scenario"
+      url:  "/sims/Instructions/Labs/02-explore-ai-agent"
+      duration: "15 min"
+    - id: lab4
+      title: "Explore generative AI in Azure AI Foundry portal"
+      url:  "/fundamentals/Instructions/Exercises/02-generative-ai"
+      duration: "20 min"
+    - id: lab5
+      title: "Explore a natural language processing scenario"
+      url:  "/sims/Instructions/Labs/03-explore-nlp"
+      duration: "15 min"
+    - id: lab6
+      title: "Analyze text in Azure AI Foundry portal"
+      url:  "/fundamentals/Instructions/Exercises/03-text-analysis"
+      duration: "20 min"
+    - id: lab7
+      title: "Explore speech in Azure AI Foundry portal"
+      url:  "/fundamentals/Instructions/Exercises/04-speech"
+      duration: "15 min"
+    - id: lab8
+      title: "Explore a computer vision scenario"
+      url:  "/sims/Instructions/Labs/04-explore-vision"
+      duration: "15 min"
+    - id: lab9
+      title: "Analyze images in Azure AI Foundry portal"
+      url:  "/fundamentals/Instructions/Exercises/05-image-analysis"
+      duration: "20 min"
+    - id: lab10
+      title: "Explore an AI information extraction scenario"
+      url:  "/sims/Instructions/Labs/05-explore-info"
+      duration: "15 min"
+    - id: lab11
+      title: "Extract data with Content Understanding in Azure AI Foundry portal"
+      url:  "/fundamentals/Instructions/Exercises/06-content-understanding"
+      duration: "25 min"
