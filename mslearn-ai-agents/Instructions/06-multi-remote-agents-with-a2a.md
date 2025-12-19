@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Connect to remote agents with A2A protocol'
     description: 'Use the A2A protocol to collaborate with remote agents.'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Connect to remote agents with A2A protocol

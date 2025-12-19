@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Create a generative AI chat app'
     description: 'Learn how to use the Microsoft Foundry SDK to build an app that connects to your project and chats with a language model.'
+prev: /mslearn-ai-studio/Instructions/02-Explore-model-catalog    
+next: /mslearn-ai-studio/Instructions/04-Use-own-data
 ---
 
 # Create a generative AI chat app

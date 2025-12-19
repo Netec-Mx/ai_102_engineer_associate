@@ -1,7 +1,11 @@
 ---
+layout: lab
 lab:
     title: 'Analyze images'
     description: 'Use Azure AI Vision Image Analysis to analyze images, suggest captions and tags, and detect objects and people.'
+prev: /mslearn-ai-language/Instructions/Labs/09-audio-chat     
+next: /mslearn-ai-vision/Instructions/Labs/02-ocr
+
 ---
 
 # Analyze images

@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Develop an audio-enabled chat app'
     description: 'Learn how to use Azure AI Foundry to build a generative AI app that supports audio input.'
+prev: /mslearn-ai-language/Instructions/Labs/07-speech      
+next: /mslearn-ai-vision/Instructions/Labs/01-analyze-images
 ---
 
 # Develop an audio-enabled chat app

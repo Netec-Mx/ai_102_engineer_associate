@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Develop an Azure AI Voice Live voice agent'
     description: 'Learn how to create a web app to enable real-time voice interactions with an Azure AI Voice Live agent.'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Develop an Azure AI Voice Live voice agent

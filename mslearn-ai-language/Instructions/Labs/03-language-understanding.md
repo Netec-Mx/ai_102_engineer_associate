@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Create a language understanding model with the Azure AI Language service'
     description: "Create a custom language understanding model to interpret input, predict intent, and identify entities."
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Create a language understanding model with the Language service

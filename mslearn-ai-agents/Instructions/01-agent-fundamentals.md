@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Explore AI Agent development'
     description: 'Take your first steps in developing AI agents by exploring the Azure AI Agent service in the Microsoft Foundry portal.'
+prev: /mslearn-ai-studio/Instructions/07-Evaluate-prompt-flow   
+next: /mslearn-ai-agents/Instructions/02-build-ai-agent
 ---
 
 # Explore AI Agent development

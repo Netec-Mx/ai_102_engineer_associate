@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Develop a multi-agent solution with Microsoft Foundry'
     description: 'Learn to configure multiple agents to collaborate using Microsoft Foundry Agent Service'
+prev: /mslearn-ai-agents/Instructions/02-build-ai-agent     
+next: /mslearn-ai-agents/Instructions/03c-use-agent-tools-with-mcp
 ---
 
 # Develop a multi-agent solution

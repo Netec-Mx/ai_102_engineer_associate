@@ -1,6 +1,6 @@
 ---
 title: Azure AI Language Exercises
-permalink: index.html
+# permalink: index.html
 layout: home
 ---
 

@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Create a Question Answering solution'
     description: "Use Azure AI Language to create a custom question answering solution."
+prev: /mslearn-ai-language/Instructions/Labs/01-analyze-text      
+next: /mslearn-ai-language/Instructions/Labs/04-text-classification
 ---
 
 # Create a Question Answering Solution

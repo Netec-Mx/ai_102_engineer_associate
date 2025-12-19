@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Analyze text'
     description: "Use Azure AI Language to analyze text, including language detection, sentiment analysis, key phrase extraction, and entity recognition."
+prev: /mslearn-ai-agents/Instructions/04-semantic-kernel    
+next: /mslearn-ai-language/Instructions/Labs/02-qna
 ---
 
 # Analyze Text

@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Choose and deploy a language model'
     description: 'Generative AI applications are built on one or more language models. Learn how to find and select appropriate models for your generative AI project.'
+prev: /mslearn-ai-studio/Instructions/01-Explore-ai-studio     
+next: /mslearn-ai-studio/Instructions/02a-AI-foundry-sdk
 ---
 
 # Choose and deploy a language model

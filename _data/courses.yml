@@ -5,47 +5,111 @@ ai_102_engineer_associate:
   labs:
       # EJEMPLO
     - id: lab1
-      title: "Explore machine learning scenarios"
-      url:  "/sims/Instructions/Labs/01-explore-ml"
-      duration: "15 min"
+      title: "Explore AI  Studio"
+      url:  "/mslearn-ai-studio/Instructions/01-Explore-ai-studio"
+      duration: "30 min"
       # ESTRUCTURA COPIAR Y PEGAR CUANTAS VECES SEA NECESARIO
     - id: lab2
-      title: "Explore Automated Machine Learning in Azure Machine Learning"
-      url:  "/fundamentals/Instructions/Exercises/01-machine-learning"
-      duration: "35 min"
-    - id: lab3
-      title: "Explore a generative AI agent scenario"
-      url:  "/sims/Instructions/Labs/02-explore-ai-agent"
-      duration: "15 min"
-    - id: lab4
-      title: "Explore generative AI in Azure AI Foundry portal"
-      url:  "/fundamentals/Instructions/Exercises/02-generative-ai"
-      duration: "20 min"
-    - id: lab5
-      title: "Explore a natural language processing scenario"
-      url:  "/sims/Instructions/Labs/03-explore-nlp"
-      duration: "15 min"
-    - id: lab6
-      title: "Analyze text in Azure AI Foundry portal"
-      url:  "/fundamentals/Instructions/Exercises/03-text-analysis"
-      duration: "20 min"
-    - id: lab7
-      title: "Explore speech in Azure AI Foundry portal"
-      url:  "/fundamentals/Instructions/Exercises/04-speech"
-      duration: "15 min"
-    - id: lab8
-      title: "Explore a computer vision scenario"
-      url:  "/sims/Instructions/Labs/04-explore-vision"
-      duration: "15 min"
-    - id: lab9
-      title: "Analyze images in Azure AI Foundry portal"
-      url:  "/fundamentals/Instructions/Exercises/05-image-analysis"
-      duration: "20 min"
-    - id: lab10
-      title: "Explore an AI information extraction scenario"
-      url:  "/sims/Instructions/Labs/05-explore-info"
-      duration: "15 min"
-    - id: lab11
-      title: "Extract data with Content Understanding in Azure AI Foundry portal"
-      url:  "/fundamentals/Instructions/Exercises/06-content-understanding"
+      title: "Choose and deploy a language model"
+      url:  "/mslearn-ai-studio/Instructions/02-Explore-model-catalog"
       duration: "25 min"
+    - id: lab3
+      title: "Create a generative AI chat app "
+      url:  "/mslearn-ai-studio/Instructions/02a-AI-foundry-sdk"
+      duration: "40 min"
+    - id: lab4
+      title: "Create a generative AI app that uses your own data"
+      url:  "/mslearn-ai-studio/Instructions/04-Use-own-data"
+      duration: "45 min"
+    - id: lab5
+      title: "Apply content filters to prevent the output of harmful content"
+      url:  "/mslearn-ai-studio/Instructions/06-Explore-content-filters"
+      duration: "25 min"
+    - id: lab6
+      title: "Evaluate generative AI model performance"
+      url:  "/mslearn-ai-studio/Instructions/07-Evaluate-prompt-flow"
+      duration: "30 min"
+    - id: lab7
+      title: "Explore AI Agent development"
+      url:  "/mslearn-ai-agents/Instructions/01-agent-fundamentals"
+      duration: "30 min"
+    - id: lab8
+      title: "Develop an AI agent "
+      url:  "/mslearn-ai-agents/Instructions/02-build-ai-agent"
+      duration: "30 min"
+    - id: lab9
+      title: "Develop a multi-agent solution with Azure AI Foundry"
+      url:  "/mslearn-ai-agents/Instructions/03b-build-multi-agent-solution"
+      duration: "30 min"
+    - id: lab10
+      title: "Connect AI Agents to a remote MCP server "
+      url:  "/mslearn-ai-agents/Instructions/03c-use-agent-tools-with-mcp"
+      duration: "30 min"
+    - id: lab11
+      title: "Develop an Azure AI agent with the Semantic Kernel SDK"
+      url:  "/mslearn-ai-agents/Instructions/04-semantic-kernel"
+      duration: "30 min"
+    - id: lab12
+      title: "Analyze text "
+      url:  "/mslearn-ai-language/Instructions/Labs/01-analyze-text"
+      duration: "30 min"
+    - id: lab13
+      title: "Create a question answering solution "
+      url:  "/mslearn-ai-language/Instructions/Labs/02-qna"
+      duration: "20 min"
+    - id: lab14
+      title: "Custom text classification"
+      url:  "/mslearn-ai-language/Instructions/Labs/04-text-classification"
+      duration: "35 min"
+    - id: lab15
+      title: "Recognize and synthesize speech"
+      url:  "/mslearn-ai-language/Instructions/Labs/07-speech"
+      duration: "30 min"
+    - id: lab16
+      title: "Develop an audio-enabled chat app"
+      url:  "/mslearn-ai-language/Instructions/Labs/09-audio-chat"
+      duration: "30 min"
+    - id: lab17
+      title: "Analyze images"
+      url:  "/mslearn-ai-vision/Instructions/Labs/01-analyze-images"
+      duration: "30 min"
+    - id: lab18
+      title: "Read text in images"
+      url:  "/mslearn-ai-vision/Instructions/Labs/02-ocr"
+      duration: "30 min"
+    - id: lab19
+      title: "Detect and analyze faces"
+      url:  "/mslearn-ai-vision/Instructions/Labs/03-face-service"
+      duration: "30 min"
+    - id: lab20
+      title: "Classify images"
+      url:  "/mslearn-ai-vision/Instructions/Labs/04-image-classification"
+      duration: "45 min"
+    - id: lab21
+      title: "Develop a vision-enabled chat app"
+      url:  "/mslearn-ai-vision/Instructions/Labs/08-gen-ai-vision"
+      duration: "30 min"
+    - id: lab22
+      title: "Generate images with AI"
+      url:  "/mslearn-ai-vision/Instructions/Labs/09-dall-e"
+      duration: "30 min"
+    - id: lab23
+      title: "Extract information from multimodal content"
+      url:  "/mslearn-ai-information-extraction/Instructions/Labs/01-content-understanding"
+      duration: "40 min"
+    - id: lab24
+      title: "Develop a Content Understanding client application"
+      url:  "/mslearn-ai-information-extraction/Instructions/Labs/02-content-understanding-api"
+      duration: "30 min"
+    - id: lab25
+      title: "Analyze forms with prebuilt Azure AI Document Intelligence models Analyze forms with custom Azure AI Document Intelligence models"
+      url:  "/mslearn-ai-information-extraction/Instructions/Labs/03-prebuilt-doc-intelligence-model"
+      duration: "30 min"
+    - id: lab26
+      title: "Analyze forms with custom Azure AI Document Intelligence models "
+      url:  "/mslearn-ai-information-extraction/Instructions/Labs/04-custom-doc-intelligence-model"
+      duration: "30 min"
+    - id: lab27
+      title: "Create a knowledge mining solution"
+      url:  "/mslearn-ai-information-extraction/Instructions/Labs/05-knowledge-mining"
+      duration: "40 min"

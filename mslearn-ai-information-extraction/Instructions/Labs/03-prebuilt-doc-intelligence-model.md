@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Analyze forms with prebuilt Azure AI Document Intelligence models'
     description: 'Use prebuilt Azure AI Document Intelligence models to process text fields from documents.'
+prev: /mslearn-ai-information-extraction/Instructions/Labs/02-content-understanding-api      
+next: /mslearn-ai-information-extraction/Instructions/Labs/04-custom-doc-intelligence-model
 ---
 
 # Analyze forms with prebuilt Azure AI Document Intelligence models

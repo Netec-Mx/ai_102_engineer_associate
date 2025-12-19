@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Create a knowledge mining solution'
     description: 'Use Azure AI Search to extract key information from documents and make it easier to search and analyze.'
+prev: /mslearn-ai-information-extraction/Instructions/Labs/04-custom-doc-intelligence-model       
+next: /mslearn-ai-studio/Instructions/01-Explore-ai-studio
 ---
 
 # Create a knowledge mining solution

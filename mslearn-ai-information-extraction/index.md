@@ -1,6 +1,6 @@
 ---
 title: Develop AI-powered information extraction solutions in Azure
-permalink: index.html
+# permalink: index.html
 layout: home
 ---
 

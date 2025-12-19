@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Recognize and Synthesize Speech'
     description: "Implement a speaking clock that converts speech to text, and text to speech."
+prev: /mslearn-ai-language/Instructions/Labs/04-text-classification      
+next: /mslearn-ai-language/Instructions/Labs/09-audio-chat
 ---
 
 # Recognize and synthesize speech

@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Extract custom entities'
     description: "Train a model to extract customized entities from text input using Azure AI Language."
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Extract custom entities

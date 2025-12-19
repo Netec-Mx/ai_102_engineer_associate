@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Fine-tune a language model'
     description: 'Learn how to use your own training data to fine-tune a model and customize its behavior.'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Fine-tune a language model

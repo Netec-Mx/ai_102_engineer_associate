@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Develop a vision-enabled chat app'
     description: 'Use Azure AI Foundry to build a generative AI app that supports image input.'
+prev: /mslearn-ai-vision/Instructions/Labs/04-image-classification       
+next: /mslearn-ai-vision/Instructions/Labs/09-dall-e
 ---
 
 # Develop a vision-enabled chat app

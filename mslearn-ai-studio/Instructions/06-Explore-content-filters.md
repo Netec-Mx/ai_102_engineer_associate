@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Apply content filters to prevent the output of harmful content'
     description: 'Learn how to apply content filters that mitigate potentially offensive or harmful output in your generative AI app.'
+prev: /mslearn-ai-studio/Instructions/04-Use-own-data      
+next: /mslearn-ai-studio/Instructions/07-Evaluate-prompt-flow
 ---
 
 # Apply content filters to prevent the output of harmful content

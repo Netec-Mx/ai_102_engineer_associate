@@ -1,6 +1,6 @@
 ---
 title: Develop AI Agents in Azure
-permalink: index.html
+# permalink: index.html
 layout: home
 ---
 

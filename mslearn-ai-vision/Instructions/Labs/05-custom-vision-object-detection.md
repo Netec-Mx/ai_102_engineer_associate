@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Detect objects in images'
     description: 'Use the Azure AI Custom Vision service to train an object detection model.'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Detect objects in images

@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Read text in images'
     description: 'Use optical character recognition (OCR) in the Azure AI Vision Image Analysis service to locate and extract text in images.'
+prev: /mslearn-ai-vision/Instructions/Labs/01-analyze-images      
+next: /mslearn-ai-vision/Instructions/Labs/03-face-service
 ---
 
 # Read text in images

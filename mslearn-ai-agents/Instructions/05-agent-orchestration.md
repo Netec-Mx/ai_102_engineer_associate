@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Develop a multi-agent solution with Microsoft Agent Framework'
     description: 'Learn to configure multiple agents to collaborate using the Microsoft Agent Framework SDK'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Develop a multi-agent solution

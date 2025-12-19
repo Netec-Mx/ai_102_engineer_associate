@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Classify images'
     description: "Use the Azure AI Custom Vision service to train an image classification model."
+prev: /mslearn-ai-vision/Instructions/Labs/03-face-service      
+next: /mslearn-ai-vision/Instructions/Labs/08-gen-ai-vision
 ---
 
 # Classify images

@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Generate images with AI'
     description: 'Use an OpenAI a DALL-E model in Azure AI Foundry to generate images.'
+prev: /mslearn-ai-vision/Instructions/Labs/08-gen-ai-vision     
+next: /mslearn-ai-information-extraction/Instructions/Labs/01-content-understanding
 ---
 
 # Generate images with AI

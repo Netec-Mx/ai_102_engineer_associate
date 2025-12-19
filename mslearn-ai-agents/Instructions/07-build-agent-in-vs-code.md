@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Develop an AI agent with VS Code extension'
     description: 'Use the Microsoft Foundry VS Code extension to create an AI agent.'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Develop an AI agent with VS Code extension

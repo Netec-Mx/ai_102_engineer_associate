@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Develop a Content Understanding client application'
     description: 'Use Azure AI Content Understanding REST API to develop a client app for an analyzer.'
+prev: /mslearn-ai-information-extraction/Instructions/Labs/01-content-understanding     
+next: /mslearn-ai-information-extraction/Instructions/Labs/03-prebuilt-doc-intelligence-model
 ---
 
 # Develop a Content Understanding client application

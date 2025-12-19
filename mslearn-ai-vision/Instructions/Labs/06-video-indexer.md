@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Analyze video'
     description: 'Use Azure AI Video Indexer to analyze a video.'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Analyze video

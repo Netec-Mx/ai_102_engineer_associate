@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Evaluate generative AI model performance'
     description: 'Learn how to evaluate models and prompts to optimize the performance of your chat app and its ability to respond appropriately.'
+prev: /mslearn-ai-studio/Instructions/06-Explore-content-filters    
+next: /mslearn-ai-agents/Instructions/01-agent-fundamentals
 ---
 
 # Evaluate generative AI model performance

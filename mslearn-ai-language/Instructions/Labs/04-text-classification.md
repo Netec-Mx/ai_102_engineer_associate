@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Custom text classification'
     description: "Apply custom classifications to text input using Azure AI Language."
+prev: /mslearn-ai-language/Instructions/Labs/02-qna    
+next: /mslearn-ai-language/Instructions/Labs/07-speech
 ---
 
 # Custom text classification

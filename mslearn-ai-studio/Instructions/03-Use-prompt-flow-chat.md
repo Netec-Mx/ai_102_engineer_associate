@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Use a prompt flow to manage conversation in a chat app'
     description: 'Learn how to use prompt flows to manage conversational dialogs and ensure that prompts are constructed and orchestrated for best results.'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 ## Use a prompt flow to manage conversation in a chat app

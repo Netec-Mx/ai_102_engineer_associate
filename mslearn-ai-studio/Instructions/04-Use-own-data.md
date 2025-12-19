@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Create a generative AI app that uses your own data'
     description: 'Learn how to use the Retrieval Augmented Generation (RAG) model to build a chat app that grounds prompts using your own data.'
+prev: /mslearn-ai-studio/Instructions/02a-AI-foundry-sdk     
+next: /mslearn-ai-studio/Instructions/06-Explore-content-filters
 ---
 
 # Create a generative AI app that uses your own data

@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Develop an Azure AI agent with the Microsoft Agent Framework SDK'
     description: 'Learn how to use the Microsoft Agent Framework SDK to create and use an Azure AI chat agent.'
+prev: /mslearn-ai-agents/Instructions/03c-use-agent-tools-with-mcp      
+next: /mslearn-ai-language/Instructions/Labs/01-analyze-text
 ---
 
 # Develop an Azure AI chat agent with the Microsoft Agent Framework SDK

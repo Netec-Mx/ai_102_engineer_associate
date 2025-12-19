@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Translate Speech'
     description: "Translate language speech to speech and implement in your own app."
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Translate Speech

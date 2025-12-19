@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Connect AI Agents to a remote MCP server'
     description: 'Learn how to integrate Model Context Protocol tools with AI agents'
+prev: /mslearn-ai-agents/Instructions/03b-build-multi-agent-solution     
+next: /mslearn-ai-agents/Instructions/04-semantic-kernel
 ---
 
 # Connect AI agents to tools using Model Context Protocol (MCP)

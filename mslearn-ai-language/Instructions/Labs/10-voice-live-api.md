@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Explore the Voice Live API'
     description: 'Learn how to use, and customize, the Voice Live API available in the Azure AI Foundry Playground.'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Explore the Voice Live API

@@ -1,6 +1,6 @@
 ---
 title: Develop generative AI solutions in Azure
-permalink: index.html
+# permalink: index.html
 layout: home
 ---
 

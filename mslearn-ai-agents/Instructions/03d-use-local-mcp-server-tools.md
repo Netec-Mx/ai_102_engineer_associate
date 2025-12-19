@@ -1,3 +1,9 @@
+---
+layout: lab
+prev: /lab10/lab10/       
+next: /lab2/lab2/
+---
+
 # Connect AI agents to tools using Model Context Protocol (MCP)
 
 In this exercise, you'll create an agent that can connect to an MCP server and automatically discover callable functions.

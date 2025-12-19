@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Translate Text'
     description: "Translate provided text between any supported languages with Azure AI Translator."
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Translate Text

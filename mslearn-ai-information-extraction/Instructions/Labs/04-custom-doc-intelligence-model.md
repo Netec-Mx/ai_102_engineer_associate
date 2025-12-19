@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Analyze forms with custom Azure AI Document Intelligence models'
     description: 'Create a custom Document Intelligence model to extract specific data from documents.'
+prev: /mslearn-ai-information-extraction/Instructions/Labs/03-prebuilt-doc-intelligence-model       
+next: /mslearn-ai-information-extraction/Instructions/Labs/05-knowledge-mining
 ---
 
 # Analyze forms with custom Azure AI Document Intelligence models

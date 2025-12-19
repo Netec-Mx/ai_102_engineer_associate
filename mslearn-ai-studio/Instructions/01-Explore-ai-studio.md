@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Prepare for an AI development project'
     description: 'Learn how to organize cloud resources in Microsoft Foundry projects so that developers are set up for success when building AI solutions.'
+prev: /mslearn-ai-information-extraction/Instructions/Labs/05-knowledge-mining       
+next: /mslearn-ai-studio/Instructions/02-Explore-model-catalog
 ---
 
 # Prepare for an AI development project

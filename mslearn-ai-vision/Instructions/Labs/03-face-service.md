@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Detect and analyze faces'
     description: 'Use the Azure AI Vision Face service to implement face detection and analysis solutions.'
+prev: /mslearn-ai-vision/Instructions/Labs/02-ocr      
+next: /mslearn-ai-vision/Instructions/Labs/04-image-classification
 ---
 
 # Detect and analyze faces

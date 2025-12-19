@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Use a custom function in an AI agent'
     description: 'Learn how to use functions to add custom capabilities to your agents.'
+prev: /lab10/lab10/       
+next: /lab2/lab2/
 ---
 
 # Use a custom function in an AI agent

@@ -1,7 +1,10 @@
 ---
+layout: lab
 lab:
     title: 'Develop an AI agent'
     description: 'Use the Azure AI Agent Service to develop an agent that uses built-in tools.'
+prev: /mslearn-ai-agents/Instructions/01-agent-fundamentals      
+next: /mslearn-ai-agents/Instructions/03b-build-multi-agent-solution
 ---
 
 # Develop an AI agent
