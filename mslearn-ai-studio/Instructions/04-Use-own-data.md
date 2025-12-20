@@ -7,13 +7,14 @@ prev: /mslearn-ai-studio/Instructions/02a-AI-foundry-sdk
 next: /mslearn-ai-studio/Instructions/06-Explore-content-filters
 ---
 
-# Create a generative AI app that uses your own data
+# Lab4: Create a generative AI app that uses your own data
 
 Retrieval Augmented Generation (RAG) is a technique used to build applications that integrate data from custom data sources into a prompt for a generative AI model. RAG is a commonly used pattern for developing generative AI apps - chat-based applications that use a language model to interpret inputs and generate appropriate responses.
 
 In this exercise, you'll use Microsoft Foundry to integrate custom data into a generative AI solution.
 
 > **Note**: The code in this exercise is based on pre-release SDK software, which may be subject to change. Where necessary, we've used specific versions of packages; which may not reflect the latest available versions. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 While this exercise is based on the Azure OpenAI Python SDK, you can develop AI chat applications using multiple language-specific SDKs; including:
 
@@ -38,8 +39,11 @@ The features of Foundry we're going to use in this exercise require a project th
     - **Region**:  East US 2 or Sweden Central (*In the event of a quota limit being exceeded later in the exercise, you may need to create another resource in a different region.*)
 
     > **Note**: If you're working in an Azure subscription in which policies are used to restrict allowable resource names, you may need to use the link at the bottom of the **Create a new project** dialog box to create the hub using the Azure portal.
+    {: .lab-note .info .compact}
 
     > **Tip**: If the **Create** button is still disabled, be sure to rename your hub to a unique alphanumeric value.
+    {: .lab-note .important .compact}
+
 
 1. Wait for your project to be created, and then navigate to your project.
 
@@ -63,10 +67,12 @@ You need two models to implement your solution:
     - **Content filter**: DefaultV2
 
     > **Note**: If your current AI resource location doesn't have quota available for the model you want to deploy, you will be asked to choose a different location where a new AI resource will be created and connected to your project.
+    {: .lab-note .info .compact}
 
 1. Return to the **Models catalog** page and repeat the previous steps to deploy a **gpt-4o** model using a **Global Standard** deployment of the most recent version with a TPM rate limit of **50K** (or the maximum available in your subscription if less than 50K).
 
     > **Note**: Reducing the Tokens Per Minute (TPM) helps avoid over-using the quota available in the subscription you are using. 50,000 TPM is sufficient for the data used in this exercise.
+    {: .lab-note .info .compact}
 
 ## Add data to your project
 
@@ -116,6 +122,8 @@ Now that you've added a data source to your project, you can use it to create an
     - Register the index asset.
 
     > **Tip**: While you're waiting for the index to be created, why not take a look at the brochures you downloaded to get familiar with their contents?
+    {: .lab-note .important .compact}
+
 
 ## Test the index in the playground
 
@@ -127,6 +135,8 @@ Before using your index in a RAG-based prompt flow, let's verify that it can be 
 1. In the Setup pane, expand the **Add your data** field, and then add the **brochures-index** project index and select the **hybrid (vector + keyword)** search type.
 
    > **Tip**: In some cases, newly created indexes may not be available right away. Refreshing the browser usually helps, but if you're still experiencing the issue where it can't find the index you may need to wait until the index is recognized.
+    {: .lab-note .important .compact}
+
 
 1. After the index has been added and the chat session has restarted, resubmit the prompt `Where can I stay in New York?`
 1. Review the response, which should be based on data in the index.
@@ -143,6 +153,7 @@ Now that you have a working index, you can use the Azure OpenAI SDK to implement
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -156,6 +167,8 @@ Now that you have a working index, you can use the Azure OpenAI SDK to implement
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the chat application code files:
 

@@ -7,7 +7,7 @@ prev: /mslearn-ai-language/Instructions/Labs/01-analyze-text
 next: /mslearn-ai-language/Instructions/Labs/04-text-classification
 ---
 
-# Create a Question Answering Solution
+# Lab13: Create a Question Answering Solution
 
 One of the most common conversational scenarios is providing support through a knowledge base of frequently asked questions (FAQs). Many organizations publish FAQs as documents or web pages, which works well for a small set of question and answer pairs, but large documents can be difficult and time-consuming to search.
 
@@ -42,6 +42,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     > **NOTE**
     > Custom Question Answering uses Azure Search to index and query the knowledge base of questions and answers.
+    {: .lab-note .info .compact}
 
 1. Wait for deployment to complete, and then go to the deployed resource.
 1. View the **Keys and Endpoint** page in the **Resource Management** section. You will need the information on this page later in the exercise.
@@ -133,6 +134,7 @@ You'll develop your question answering app using Cloud Shell in the Azure portal
 1. In the Azure Portal, use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -146,6 +148,8 @@ You'll develop your question answering app using Cloud Shell in the Azure portal
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the application code files:  
 
@@ -193,6 +197,8 @@ You'll develop your question answering app using Cloud Shell in the Azure portal
 1. Review the existing code. You will add code to work with your knowledge base.
 
     > **Tip**: As you add code to the code file, be sure to maintain the correct indentation.
+    {: .lab-note .important .compact}
+
 
 1. In the code file, find the comment **Import namespaces**. Then, under this comment, add the following language-specific code to import the namespaces you will need to use the Question Answering SDK:
 

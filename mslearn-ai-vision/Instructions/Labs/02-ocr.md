@@ -7,11 +7,12 @@ prev: /mslearn-ai-vision/Instructions/Labs/01-analyze-images
 next: /mslearn-ai-vision/Instructions/Labs/03-face-service
 ---
 
-# Read text in images
+# Lab18: Read text in images
 
 Optical character recognition (OCR) is a subset of computer vision that deals with reading text in images and documents. The **Azure AI Vision** Image Analysis service provides an API for reading text, which you'll explore in this exercise.
 
 > **Note**: This exercise is based on pre-release SDK software, which may be subject to change. Where necessary, we've used specific versions of packages; which may not reflect the latest available versions. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 While this exercise is based on the Azure Vision Analysis Python SDK, you can develop vision applications using multiple language-specific SDKs; including:
 
@@ -26,6 +27,7 @@ This exercise takes approximately **30** minutes.
 If you don't already have one in your subscription, you'll need to provision an Azure AI Vision resource.
 
 > **Note**: In this exercise, you'll use a standalone **Computer Vision** resource. You can also use Azure AI Vision services in an *Azure AI Services* multi-service resource, either directly or in an *Azure AI Foundry* project.
+{: .lab-note .info .compact}
 
 1. Open the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`, and sign in using your Azure credentials. Close any welcome messages or tips that are displayed.
 1. Select **Create a resource**.
@@ -53,8 +55,10 @@ In this exercise, you'll complete a partially implemented client application tha
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
     > **Note**: If the portal asks you to select a storage to persist your files, choose **No storage account required**, select the subscription you are using and press **Apply**.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -63,6 +67,8 @@ In this exercise, you'll complete a partially implemented client application tha
 1. Resize the cloud shell pane so you can still see the **Keys and Endpoint** page for your Computer Vision resource.
 
     > **Tip**" You can resize the pane by dragging the top border. You can also use the minimize and maximize buttons to switch between the cloud shell and the main portal interface.
+    {: .lab-note .important .compact}
+
 
 1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the command, or copy it to the clipboard and then right-click in the command line and paste as plain text):
 
@@ -72,6 +78,8 @@ In this exercise, you'll complete a partially implemented client application tha
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, use the following command to navigate to the application code files:
 
@@ -110,6 +118,8 @@ In this exercise, you'll complete a partially implemented client application tha
     ```
 
     > **Tip**: You might want to maximize the cloud shell pane and move the split-bar between the command line cosole and the code editor so you can see the code more easily.
+    {: .lab-note .important .compact}
+
 
 1. In the code file, find the comment **Import namespaces**, and add the following code to import the namespaces you will need to use the Azure AI Vision SDK:
 

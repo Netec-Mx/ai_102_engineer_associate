@@ -7,13 +7,14 @@ prev: /mslearn-ai-agents/Instructions/03c-use-agent-tools-with-mcp
 next: /mslearn-ai-language/Instructions/Labs/01-analyze-text
 ---
 
-# Develop an Azure AI chat agent with the Microsoft Agent Framework SDK
+# Lab11: Develop an Azure AI chat agent with the Microsoft Agent Framework SDK
 
 In this exercise, you'll use Azure AI Agent Service and Microsoft Agent Framework to create an AI agent that processes expense claims.
 
 This exercise should take approximately **30** minutes to complete.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Deploy a model in a Microsoft Foundry project
 
@@ -58,6 +59,7 @@ Now you're ready to create a client app that defines an agent and a custom funct
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -71,6 +73,7 @@ Now you're ready to create a client app that defines an agent and a custom funct
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer and the cursor on the current line may be obscured. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
 
 1. When the repo has been cloned, enter the following command to change the working directory to the folder containing the code files and list them all.
 
@@ -105,6 +108,7 @@ Now you're ready to create a client app that defines an agent and a custom funct
 ### Write code for an agent app
 
 > **Tip**: As you add code, be sure to maintain the correct indentation. Use the existing comments as a guide, entering the new code at the same level of indentation.
+{: .lab-note .important .compact}
 
 1. Enter the following command to edit the agent code file that has been provided:
 
@@ -142,6 +146,7 @@ Now you're ready to create a client app that defines an agent and a custom funct
     ```
 
     > **Note**: The function *simulates* sending an email by printing it to the console. In a real application, you'd use an SMTP service or similar to actually send the email!
+    {: .lab-note .info .compact}
 
 1. Back up above the **send_email** code, in the **process_expenses_data** function, find the comment **Create a chat agent**, and add the following code to create a  **ChatAgent** object with the tools and instructions.
 
@@ -196,6 +201,7 @@ Now you're ready to create a client app that defines an agent and a custom funct
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
     > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    {: .lab-note .info .compact}
     
 1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry hub if prompted.
 1. After you have signed in, enter the following command to run the application:
@@ -215,6 +221,7 @@ Now you're ready to create a client app that defines an agent and a custom funct
 1. When the application has finished, review the output. The agent should have composed an email for an expenses claim based on the data that was provided.
 
     > **Tip**: If the app fails because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.
+    {: .lab-note .important .compact}
 
 ## Summary
 

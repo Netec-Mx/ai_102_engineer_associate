@@ -14,8 +14,10 @@ In this exercise you create an agent in the Azure AI Foundry and explore the Voi
 This exercise takes approximately **30** minutes to complete.
 
 > <span style="color:red">**Note**:</span> Some of the technologies used in this exercise are currently in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 > <span style="color:red">**Note**:</span> This exercise is designed to be completed in a browser environment with direct access to your computer's microphone. While the concepts can be explored in Azure Cloud Shell, the interactive voice features require local audio hardware access.
+{: .lab-note .info .compact}
 
 ## Create an Azure AI Foundry project
 
@@ -42,6 +44,7 @@ Let's start by creating an Azure AI Foundry project.
 1. Select **Create** and review your configuration. Wait for the set up process to complete.
 
     >**Note**: If you receive a permissions error, select the **Fix it** button to add the appropriate permissions to continue.
+    {: .lab-note .info .compact}
 
 1. When your project is created, you will be brought by default to the Agents playground in Azure AI Foundry portal, which should look similar to the following image:
 

@@ -19,6 +19,7 @@ This kind of input is an example of an *utterance* (something a user might say o
 
 > **NOTE**
 > The task of a conversational language model is to predict the user's intent and identify any entities to which the intent applies. It is <u>not</u> the job of a conversational language model to actually perform the actions required to satisfy the intent. For example, a clock application can use a conversational language model to discern that the user wants to know the time in London; but the client application itself must then implement the logic to determine the correct time and present it to the user.
+{: .lab-note .info .compact}
 
 In this exercise, you'll use the Azure AI Language service to create a conversational language understand model, and use the Python SDK to implement a client app that uses it.
 
@@ -95,6 +96,8 @@ Now that you have created an authoring resource, you can use it to create a conv
 The first thing we'll do in the new project is to define some intents. The model will ultimately predict which of these intents a user is requesting when submitting a natural language utterance.
 
 > **Tip**: When working on your project, if some tips are displayed, read them and select **Got it** to dismiss them, or select **Skip all**.
+    {: .lab-note .important .compact}
+
 
 1. On the **Schema definition** page, on the **Intents** tab, select **&#65291; Add** to add a new intent named `GetTime`.
 1. Verify that the **GetTime** intent is listed (along with the default **None** intent). Then add the following additional intents:
@@ -117,6 +120,7 @@ To help the model predict which intent a user is requesting, you must label each
 
     > **NOTE**
     > To add a new utterance, write the utterance in the textbox next to the intent and then press ENTER. 
+    {: .lab-note .info .compact}
 
 1. Select the **GetDay** intent and add the following utterances as example input for that intent:
     - `what day is it?`
@@ -148,6 +152,7 @@ Now that you've added some intents, let's train the language model and see if it
 
     > **NOTE**
     > To learn more about the evaluation metrics, refer to the [documentation](https://learn.microsoft.com/azure/ai-services/language-service/conversational-language-understanding/concepts/evaluation-metrics)
+    {: .lab-note .info .compact}
 
 1. Go to the **Deploying a model** page, then select **Add deployment**.
 
@@ -224,6 +229,7 @@ In some cases, valid values for an entity can be restricted to a list of specifi
 
     > **NOTE**
     > To enter the fields of the new list, insert the value `Sunday` in the text field, then click on the field where 'Type in value and press enter...' is displayed, enter the synonyms, and press ENTER.
+    {: .lab-note .info .compact}
 
 1. Repeat the previous step to add the following list components:
 
@@ -330,6 +336,7 @@ You'll develop your language understanding app using Cloud Shell in the Azure po
 1. In the Azure Portal, use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -526,6 +533,7 @@ You'll develop your language understanding app using Cloud Shell in the Azure po
     >   1. Connect to a prediction endpoint.
     >   2. Submit an utterance to get a prediction.
     >   3. Implement logic to respond appropriately to the predicted intent and entities.
+    {: .lab-note .info .compact}
 
 1. When you have finished testing, enter *quit*.
 

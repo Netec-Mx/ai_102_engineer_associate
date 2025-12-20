@@ -11,10 +11,12 @@ In this exercise, you'll create an agent that can connect to an MCP server and a
 You'll build a simple inventory assessment agent for a cosmetics retailer. Using the MCP server, the agent will be able to retrieve information about the inventory and make restock or clearance suggestions.
 
 > **Tip**: The code used in this exercise is based on the for Microsoft Foundry and MCP SDKs for Python. You can develop similar solutions using the SDKs for Microsoft .NET. Refer to [Microsoft Foundry SDK client libraries](https://learn.microsoft.com/azure/ai-foundry/how-to/develop/sdk-overview) and [MCP C# SDK](https://modelcontextprotocol.github.io/csharp-sdk/api/ModelContextProtocol.html) for details.
+{: .lab-note .important .compact}
 
 This exercise should take approximately **30** minutes to complete.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Create a Foundry project
 
@@ -40,6 +42,7 @@ Let's start by creating a Foundry project.
 1. If prompted, deploy a **gpt-4o** model using either the *Global Standard* or *Standard* deployment option (depending on your quota availability).
 
     >**Note**: If quota is available, a GPT-4o base model may be deployed automatically when creating your Agent and project.
+    {: .lab-note .info .compact}
 
 1. When your project is created, the Agents playground will be opened.
 
@@ -64,6 +67,7 @@ Now that you've created your project in AI Foundry, let's develop an app that in
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -77,6 +81,7 @@ Now that you've created your project in AI Foundry, let's develop an app that in
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer and the cursor on the current line may be obscured. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
 
 1. Enter the following command to change the working directory to the folder containing the code files and list them all.
 
@@ -183,6 +188,7 @@ An MCP client is the component that connects to the MCP server to discover and c
     ```
 
     > **Tip**: As you add code to the code file, be sure to maintain the correct indentation.
+    {: .lab-note .important .compact}
 
 1. Find the comment **Add references** and add the following code to import the classes:
 
@@ -369,6 +375,7 @@ In this task, you'll prepare the AI agent, accept user prompts, and invoke the f
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
     > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    {: .lab-note .info .compact}
     
 1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry hub if prompted.
 
@@ -385,6 +392,7 @@ In this task, you'll prepare the AI agent, accept user prompts, and invoke the f
     ```
 
     > **Tip**: If the app fails because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.
+    {: .lab-note .important .compact}
 
     You should see some output similar to the folloiwng:
 

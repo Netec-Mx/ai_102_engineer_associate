@@ -7,15 +7,17 @@ prev: /mslearn-ai-agents/Instructions/01-agent-fundamentals
 next: /mslearn-ai-agents/Instructions/03b-build-multi-agent-solution
 ---
 
-# Develop an AI agent
+# Lab8: Develop an AI agent
 
 In this exercise, you'll use Azure AI Agent Service to create a simple agent that analyzes data and creates charts. The agent can use the built-in *Code Interpreter* tool to dynamically generate any code required to analyze data.
 
 > **Tip**: The code used in this exercise is based on the for Microsoft Foundry SDK for Python. You can develop similar solutions using the SDKs for Microsoft .NET, JavaScript, and Java. Refer to [Microsoft Foundry SDK client libraries](https://learn.microsoft.com/azure/ai-foundry/how-to/develop/sdk-overview) for details.
+{: .lab-note .important .compact}
 
 This exercise should take approximately **30** minutes to complete.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Create a Foundry project
 
@@ -41,6 +43,7 @@ Let's start by creating a Foundry project.
 1. If prompted, deploy a **gpt-4o** model using either the *Global Standard* or *Standard* deployment option (depending on your quota availability).
 
     >**Note**: If quota is available, a GPT-4o base model may be deployed automatically when creating your Agent and project.
+    {: .lab-note .info .compact}
 
 1. When your project is created, the Agents playground will be opened.
 
@@ -65,6 +68,7 @@ Now you're ready to create a client app that uses an agent. Some code has been p
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -78,6 +82,7 @@ Now you're ready to create a client app that uses an agent. Some code has been p
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer and the cursor on the current line may be obscured. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
 
 1. Enter the following command to change the working directory to the folder containing the code files and list them all.
 
@@ -112,6 +117,7 @@ Now you're ready to create a client app that uses an agent. Some code has been p
 ### Write code for an agent app
 
 > **Tip**: As you add code, be sure to maintain the correct indentation. Use the comment indentation levels as a guide.
+{: .lab-note .important .compact}
 
 1. Enter the following command to edit the code file that has been provided:
 
@@ -132,6 +138,7 @@ Now you're ready to create a client app that uses an agent. Some code has been p
 1. Find the comment **Connect to the Agent client** and add the following code to connect to the Azure AI project.
 
     > **Tip**: Be careful to maintain the correct indentation level.
+    {: .lab-note .important .compact}
 
     ```python
    # Connect to the Agent client
@@ -256,6 +263,7 @@ Now you're ready to create a client app that uses an agent. Some code has been p
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
     > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    {: .lab-note .info .compact}
     
 1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry hub if prompted.
 1. After you have signed in, enter the following command to run the application:
@@ -273,6 +281,7 @@ Now you're ready to create a client app that uses an agent. Some code has been p
     ```
 
     > **Tip**: If the app fails because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.
+    {: .lab-note .important .compact}
 
 1. View the response. Then enter another prompt, this time requesting a visualization:
 

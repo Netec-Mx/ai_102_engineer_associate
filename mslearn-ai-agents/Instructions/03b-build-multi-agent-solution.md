@@ -7,15 +7,17 @@ prev: /mslearn-ai-agents/Instructions/02-build-ai-agent
 next: /mslearn-ai-agents/Instructions/03c-use-agent-tools-with-mcp
 ---
 
-# Develop a multi-agent solution
+# Lab9: Develop a multi-agent solution
 
 In this exercise, you'll create a project that orchestrates multiple AI agents using Microsoft Foundry Agent Service. You'll design an AI solution that assists with ticket triage. The connected agents will assess the ticket's priority, suggest a team assignment, and determine the level of effort required to complete the ticket. Let's get started!
 
 > **Tip**: The code used in this exercise is based on the for Foundry SDK for Python. You can develop similar solutions using the SDKs for Microsoft .NET, JavaScript, and Java. Refer to [Foundry SDK client libraries](https://learn.microsoft.com/azure/ai-foundry/how-to/develop/sdk-overview) for details.
+{: .lab-note .important .compact}
 
 This exercise should take approximately **30** minutes to complete.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Create a Foundry project
 
@@ -41,6 +43,7 @@ Let's start by creating a Foundry project.
 1. If prompted, deploy a **gpt-4o** model using either the *Global Standard* or *Standard* deployment option (depending on your quota availability).
 
     >**Note**: If quota is available, a GPT-4o base model may be deployed automatically when creating your Agent and project.
+    {: .lab-note .info .compact}
 
 1. When your project is created, the Agents playground will be opened.
 
@@ -65,6 +68,7 @@ Now you're ready to create a client app that defines the agents and instructions
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -78,6 +82,7 @@ Now you're ready to create a client app that defines the agents and instructions
     ```
 
     > **Tip**: As you enter commands into the cloud shell, the output may take up a large amount of the screen buffer and the cursor on the current line may be obscured. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
 
 1. When the repo has been cloned, enter the following command to change the working directory to the folder containing the code files and list them all.
 
@@ -149,6 +154,7 @@ Now you're ready to create the agents for your multi-agent solution! Let's get s
     Now you'll add code that uses the AgentsClient to create multiple agents, each with a specific role to play in processing a support ticket.
 
     > **Tip**: When adding subsequent code, be sure to maintain the right level of indentation under the `using agents_client:` statement.
+    {: .lab-note .important .compact}
 
 1. Find the comment **Create an agent to prioritize support tickets**, and enter the following code (being careful to retain the right level of indentation):
 
@@ -335,6 +341,7 @@ Now you're ready to run your code and watch your AI agents collaborate.
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
     > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    {: .lab-note .info .compact}
 
 1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry hub if prompted.
 

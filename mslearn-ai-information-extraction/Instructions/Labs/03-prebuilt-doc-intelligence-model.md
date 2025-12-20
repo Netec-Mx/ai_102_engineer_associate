@@ -7,7 +7,7 @@ prev: /mslearn-ai-information-extraction/Instructions/Labs/02-content-understand
 next: /mslearn-ai-information-extraction/Instructions/Labs/04-custom-doc-intelligence-model
 ---
 
-# Analyze forms with prebuilt Azure AI Document Intelligence models
+# Lab25: Analyze forms with prebuilt Azure AI Document Intelligence models
 
 In this exercise, you'll set up an Azure AI Foundry project with all the necessary resources for document analysis. You'll use both the Azure AI Foundry portal and the Python SDK to submit forms to that resource for analysis.
 
@@ -34,8 +34,11 @@ Let's start by creating an Azure AI Foundry project.
     - **Region**:  *Any available region*
 
     > **Note**: If you're working in an Azure subscription in which policies are used to restrict allowable resource names, you may need to use the link at the bottom of the **Create a new project** dialog box to create the hub using the Azure portal.
+    {: .lab-note .info .compact}
 
     > **Tip**: If the **Create** button is still disabled, be sure to rename your hub to a unique alphanumeric value.
+    {: .lab-note .important .compact}
+
 
 1. Wait for your project to be created.
 1. When your project is created, close any tips that are displayed and review the project page in Azure AI Foundry portal, which should look similar to the following image:
@@ -75,6 +78,7 @@ This is the invoice that your code will analyze.
 1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -88,6 +92,8 @@ This is the invoice that your code will analyze.
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
     ***Now follow the steps for your chosen programming language.***
 

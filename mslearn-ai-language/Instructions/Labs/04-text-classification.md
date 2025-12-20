@@ -7,7 +7,7 @@ prev: /mslearn-ai-language/Instructions/Labs/02-qna
 next: /mslearn-ai-language/Instructions/Labs/07-speech
 ---
 
-# Custom text classification
+# Lab14: Custom text classification
 
 Azure AI Language provides several NLP capabilities, including the key phrase identification, text summarization, and sentiment analysis. The Language service also provides custom features like custom question answering and custom text classification.
 
@@ -58,6 +58,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 ## Configure role-based access for your user
 
 > **NOTE**: If you skip this step, you'll get a 403 error when trying to connect to your custom project. It's important that your current user has this role to access storage account blob data, even if you're the owner of the storage account.
+{: .lab-note .info .compact}
 
 1. Go to your storage account page in the Azure portal.
 2. Select **Access Control (IAM)** in the left navigation menu.
@@ -79,6 +80,7 @@ Once you've created the Azure AI Language service and storage account, you'll ne
 1. Select **Containers** in the left menu, located below **Data storage**. On the screen that appears, select **+ Container**. Give the container the name `articles`, and set **Anonymous access level** to **Container (anonymous read access for containers and blobs)**.
 
     > **NOTE**: When you configure a storage account for a real solution, be careful to assign the appropriate access level. To learn more about each access level, see the [Azure Storage documentation](https://learn.microsoft.com/azure/storage/blobs/anonymous-read-access-configure).
+    {: .lab-note .info .compact}
 
 1. After you've created the container, select it then select the **Upload** button. Select **Browse for files** to browse for the sample articles you downloaded. Then select **Upload**.
 
@@ -87,6 +89,7 @@ Once you've created the Azure AI Language service and storage account, you'll ne
 After configuration is complete, create a custom text classification project. This project provides a working place to build, train, and deploy your model.
 
 > **NOTE**: This lab utilizes **Language Studio**, but you can also create, build, train, and deploy your model through the REST API.
+{: .lab-note .info .compact}
 
 1. In a new browser tab, open the Azure AI Language Studio portal at `https://language.cognitive.azure.com/` and sign in using the Microsoft account associated with your Azure subscription.
 1. If prompted to choose a Language resource, select the following settings:
@@ -117,6 +120,8 @@ After configuration is complete, create a custom text classification project. Th
 1. Select **Create project**.
 
 > **Tip**: If you get an error about not being authorized to perform this operation, you'll need to add a role assignment. To fix this, we add the role "Storage Blob Data Contributor" on the storage account for the user running the lab. More details can be found [on the documentation page](https://learn.microsoft.com/azure/ai-services/language-service/custom-named-entity-recognition/how-to/create-project?tabs=portal%2Clanguage-studio#enable-identity-management-for-your-resource)
+    {: .lab-note .important .compact}
+
 
 ## Label your data
 
@@ -148,6 +153,7 @@ Now that your project is created, you need to label, or tag, your data to train 
 
     > **NOTE**
     > Files in Language Studio are listed alphabetically, which is why the above list is not in sequential order. Make sure you visit both pages of documents when labeling your articles.
+    {: .lab-note .info .compact}
 
 1. Select **Save labels** to save your labels.
 
@@ -162,6 +168,8 @@ After you've labeled your data, you need to train your model.
 
     > **TIP**
     > In your own classification projects, the Azure AI Language service will automatically split the testing set by percentage which is useful with a large dataset. With smaller datasets, it's important to train with the right class distribution.
+    {: .lab-note .important .compact}
+
 
 1. Select **Train**
 
@@ -191,6 +199,7 @@ To test the custom text classification capabilities of the Azure AI Language ser
 1. In the Azure Portal, use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -204,6 +213,8 @@ To test the custom text classification capabilities of the Azure AI Language ser
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the application code files:  
 
@@ -251,6 +262,8 @@ To test the custom text classification capabilities of the Azure AI Language ser
 1. Review the existing code. You will add code to work with the AI Language Text Analytics SDK.
 
     > **Tip**: As you add code to the code file, be sure to maintain the correct indentation.
+    {: .lab-note .important .compact}
+
 
 1. At the top of the code file, under the existing namespace references, find the comment **Import namespaces** and add the following code to import the namespaces you will need to use the Text Analytics SDK:
 

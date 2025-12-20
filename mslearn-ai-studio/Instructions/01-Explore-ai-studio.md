@@ -7,13 +7,14 @@ prev: /mslearn-ai-information-extraction/Instructions/Labs/05-knowledge-mining
 next: /mslearn-ai-studio/Instructions/02-Explore-model-catalog
 ---
 
-# Prepare for an AI development project
+# Lab1: Prepare for an AI development project
 
 In this exercise, you use Microsoft Foundry portal to create a project, ready to build an AI solution.
 
 This exercise takes approximately **30** minutes.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Open Microsoft Foundry portal
 
@@ -30,6 +31,7 @@ Let's start by signing into Foundry portal.
 An Azure AI *project* provides a collaborative workspace for AI development. Let's start by choosing a model that we want to work with and creating a project to use it in.
 
 > **Note**: AI Foundry projects can be based on an *Foundry* resource, which provides access to AI models (including Azure OpenAI), Azure AI services, and other resources for developing AI agents and chat solutions. Alternatively, projects can be based on *AI hub* resources; which include connections to Azure resources for secure storage, compute, and specialized tools. Foundry based projects are great for developers who want to manage resources for AI agent or chat app development. AI hub based projects are more suitable for enterprise development teams working on complex AI solutions.
+{: .lab-note .info .compact}
 
 1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` model; which we'll use in our project.
 1. In the search results, select the **gpt-4o** model to see its details, and then at the top of the page for the model, select **Use this model**.
@@ -45,6 +47,7 @@ An Azure AI *project* provides a collaborative workspace for AI development. Let
 1. Select **Create** and wait for your project to be created. If prompted, deploy the gpt-4o model using the **Global standard** deployment type and customize the deployment details to set a **Tokens per minute rate limit** of 50K (or the maximum available if less than 50K).
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may experience errors if the rate limit is exceeded.
+    {: .lab-note .info .compact}
 
 1. When your project is created, the chat playground will be opened automatically so you can test your model:
 
@@ -68,7 +71,9 @@ An Azure AI *project* provides a collaborative workspace for AI development. Let
 
     ![Screenshot of a Foundry resource and project resources in the Azure portal.](./media/azure-portal-resources.png)
 
+    {: .lab-note .info .compact}
     Note that the resources have been created in the region you selected when creating the project.
+    
 
 1. Close the Azure portal tab and return to the Foundry portal.
 

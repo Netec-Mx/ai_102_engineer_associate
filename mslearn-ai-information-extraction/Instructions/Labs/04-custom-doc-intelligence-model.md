@@ -7,7 +7,7 @@ prev: /mslearn-ai-information-extraction/Instructions/Labs/03-prebuilt-doc-intel
 next: /mslearn-ai-information-extraction/Instructions/Labs/05-knowledge-mining
 ---
 
-# Analyze forms with custom Azure AI Document Intelligence models
+# Lab26: Analyze forms with custom Azure AI Document Intelligence models
 
 Suppose a company currently requires employees to manually purchase order sheets and enter the data into a database. They would like you to utilize AI services to improve the data entry process. You decide to build a machine learning model that will read the form and produce structured data that can be used to automatically update a database.
 
@@ -43,6 +43,7 @@ You'll develop your text translation app using Cloud Shell. The code files for y
 1. In the Azure Portal, use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. Size the cloud shell pane so you can see both the command line console and the Azure portal. You'll need to use the the split bar to switch as you switch between the two panes.
 
@@ -58,6 +59,8 @@ You'll develop your text translation app using Cloud Shell. The code files for y
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the application code files:  
 

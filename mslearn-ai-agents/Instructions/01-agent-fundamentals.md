@@ -7,13 +7,14 @@ prev: /mslearn-ai-studio/Instructions/07-Evaluate-prompt-flow
 next: /mslearn-ai-agents/Instructions/02-build-ai-agent
 ---
 
-# Explore AI Agent development
+# Lab7: Explore AI Agent development
 
 In this exercise, you use the Azure AI Agent service in the Microsoft Foundry portal to create a simple AI agent that assists employees with expense claims.
 
 This exercise takes approximately **30** minutes.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Create a Foundry project and agent
 
@@ -74,6 +75,7 @@ Now that you've created an agent, you can test it in the playground chat.
 1. In the playground chat entry, enter the prompt: `What's the maximum I can claim for meals?` and review the agent's response - which should be based on information in the expenses policy document you added as knowledge to the agent setup.
 
     > **Note**: If the agent fails to respond because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond. If the problem persists, try to increase the quota for your model on the **Models** page.
+    {: .lab-note .info .compact}
 
 1. Try the following follow-up prompt: `I'd like to submit a claim for a meal.` and review the response. The agent should ask you for the required information to submit a claim.
 1. Provide the agent with an email address; for example, `fred@contoso.com`. The agent should acknowledge the response and request the remaining information required for the expense claim (description and amount)
@@ -102,6 +104,7 @@ After experimenting with your agent in the playground, you may want to integrate
 1. Optionally, select **Open in VS Code for the Web** to launch a preconfigured workspace with the sample code ready to run.
 
     > **Note**: It may take a few minutes for the workspace to be prepared. Follow the instructions provided in the workspace to successfully run the code.
+    {: .lab-note .info .compact}
 
 ## Clean up
 

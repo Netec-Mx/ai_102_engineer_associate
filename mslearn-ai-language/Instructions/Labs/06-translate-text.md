@@ -42,6 +42,7 @@ To test the text translation capabilities of Azure AI Translator, you'll develop
 1. In the Azure Portal, use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -55,6 +56,8 @@ To test the text translation capabilities of Azure AI Translator, you'll develop
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the application code files:  
 
@@ -91,6 +94,7 @@ To test the text translation capabilities of Azure AI Translator, you'll develop
 1. Update the configuration values to include the  **region** and a **key** from the Azure AI Translator resource you created (available on the **Keys and Endpoint** page for your Azure AI Translator resource in the Azure portal).
 
     > **NOTE**: Be sure to add the *region* for your resource, <u>not</u> the endpoint!
+    {: .lab-note .info .compact}
 
 1. After you've replaced the placeholders, within the code editor, use the **CTRL+S** command or **Right-click > Save** to save your changes and then use the **CTRL+Q** command or **Right-click > Quit** to close the code editor while keeping the cloud shell command line open.
 
@@ -105,6 +109,8 @@ To test the text translation capabilities of Azure AI Translator, you'll develop
 1. Review the existing code. You will add code to work with the Azure AI Translation SDK.
 
     > **Tip**: As you add code to the code file, be sure to maintain the correct indentation.
+    {: .lab-note .important .compact}
+
 
 1. At the top of the code file, under the existing namespace references, find the comment **Import namespaces** and add the following code to import the namespaces you will need to use the Translation SDK:
 

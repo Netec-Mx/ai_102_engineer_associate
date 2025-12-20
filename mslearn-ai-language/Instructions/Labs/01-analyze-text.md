@@ -7,7 +7,7 @@ prev: /mslearn-ai-agents/Instructions/04-semantic-kernel
 next: /mslearn-ai-language/Instructions/Labs/02-qna
 ---
 
-# Analyze Text
+# Lab12: Analyze Text
 
 **Azure AI Language** supports analysis of text, including language detection, sentiment analysis, key phrase extraction, and entity recognition.
 
@@ -47,6 +47,7 @@ You'll develop your code using Cloud Shell from the Azure Portal. The code files
 1. In the Azure Portal, use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -60,6 +61,8 @@ You'll develop your code using Cloud Shell from the Azure Portal. The code files
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the application code files:  
 
@@ -107,6 +110,8 @@ You'll develop your code using Cloud Shell from the Azure Portal. The code files
 1. Review the existing code. You will add code to work with the AI Language Text Analytics SDK.
 
     > **Tip**: As you add code to the code file, be sure to maintain the correct indentation.
+    {: .lab-note .important .compact}
+
 
 1. At the top of the code file, under the existing namespace references, find the comment **Import namespaces** and add the following code to import the namespaces you will need to use the Text Analytics SDK:
 
@@ -145,6 +150,7 @@ Now that you have created a client for the API, let's use it to detect the langu
     ```
 
      > **Note**: *In this example, each review is analyzed individually, resulting in a separate call to the service for each file. An alternative approach is to create a collection of documents and pass them to the service in a single call. In both approaches, the response from the service consists of a collection of documents; which is why in the Python code above, the index of the first (and only) document in the response ([0]) is specified.*
+     {: .lab-note .info .compact}
 
 1. Save your changes. Then re-run the program.
 1. Observe the output, noting that this time the language for each review is identified.

@@ -7,7 +7,7 @@ prev: /mslearn-ai-vision/Instructions/Labs/09-dall-e
 next: /mslearn-ai-information-extraction/Instructions/Labs/02-content-understanding-api
 ---
 
-# Extract information from multimodal content
+# Lab23: Extract information from multimodal content
 
 In this exercise, you use Azure Content Understanding to extract information from a variety of content types; including an invoice, an images of a slide containing charts, an audio recording of a voice messages, and a video recording of a conference call.
 
@@ -31,8 +31,10 @@ The features of Azure AI Foundry we're going to use in this exercise require a p
         - West US
 
     > **Note**: If you're working in an Azure subscription in which policies are used to restrict allowable resource names, you may need to use the link at the bottom of the **Create a new project** dialog box to create the hub using the Azure portal.
+    {: .lab-note .info .compact}
 
     > **Tip**: If the **Create** button is still disabled, be sure to rename your hub to a unique alphanumeric value.
+    {: .lab-note .important .compact}
 
 1. Wait for your project to be created.
 
@@ -44,6 +46,7 @@ The content you're going to analyze is in a .zip archive. Download it and extrac
 1. Extract the downloaded *content.zip* file and view the files it contains. You'll use these files to build various Content Understanding analyzers in this exercise.
 
 > **Note**: If you're only interested in exploring analysis of a specific modality (documents, images, video, or audio), you can skip to the relevant task below. For the best experience, go through each task to learn how to extract information from different types of content.
+{: .lab-note .info .compact}
 
 ## Extract information from invoice documents
 
@@ -63,6 +66,7 @@ You are going to build an Azure AI Content Understanding analyzer that can extra
 1. Wait for the task to be created.
 
     > **Tip**: If an error accessing storage occurs, wait a minute and try again. Permissions for a new hub may take a few minutes to propagate.
+    {: .lab-note .important .compact}
 
 1. On the **Define schema** page, upload the **invoice-1234.pdf** file from the folder where you extracted content files. This file contains the following invoice:
 
@@ -160,6 +164,7 @@ You are going to build an Azure AI Content Understanding analyzer that can extra
 1. Wait for the task to be created.
 
     > **Tip**: If an error accessing storage occurs, wait a minute and try again. Permissions for a new hub may take a few minutes to propagate.
+    {: .lab-note .important .compact}
 
 1. On the **Define schema** page, upload the **slide-1.jpg** file from the folder where you extracted content files. Then select the **Image analysis** template and select **Create**.
 
@@ -222,6 +227,7 @@ Now that you have trained a model to extract fields from slides, you can build a
 1. Review the **Fields** pane, and verify that the analyzer extracted the correct fields from the slide image.
 
     > **Note**: Slide 2 doesn't include a breakfown by product category, so the product category revenue data is not found.
+    {: .lab-note .info .compact}
 
 1. Review the **Results** pane to see the JSON response that the analyzer would return to a client application.
 1. On the **Code example** tab, view the sample code that you could use to develop a client application that uses the Content understanding REST interface to call your analyzer.
@@ -245,6 +251,7 @@ You are going to build an Azure AI Content Understanding analyzer that can extra
 1. Wait for the task to be created.
 
     > **Tip**: If an error accessing storage occurs, wait a minute and try again. Permissions for a new hub may take a few minutes to propagate.
+    {: .lab-note .important .compact}
 
 1. On the **Define schema** page, upload the **call-1.mp3** file from the folder where you extracted content files. Then select the **Speech transcript analysis** template and select **Create**.
 1. In the **Content** pane on the right, select **Get transcription preview** to see a transcription of the recorded message.
@@ -274,6 +281,7 @@ You are going to build an Azure AI Content Understanding analyzer that can extra
     </video>
 
     **Note**: This audio was generated using AI.
+    {: .lab-note .info .compact}
 
 1. Review the analysis results, which should look similar to this:
 
@@ -300,6 +308,7 @@ Now that you have trained a model to extract fields from voice messages, you can
     </video>
 
     **Note**: This audio was generated using AI.
+    {: .lab-note .info .compact}
 
 1. Review the **Fields** pane, and verify that the analyzer extracted the correct fields from the voice message.
 1. Review the **Results** pane to see the JSON response that the analyzer would return to a client application.
@@ -324,6 +333,8 @@ You are going to build an Azure AI Content Understanding analyzer that can extra
 1. Wait for the task to be created.
 
     > **Tip**: If an error accessing storage occurs, wait a minute and try again. Permissions for a new hub may take a few minutes to propagate.
+    {: .lab-note .important .compact}
+
 
 1. On the **Define schema** page, upload the **meeting-1.mp4** file from the folder where you extracted content files. Then select the **Video analysis** template and select **Create**.
 1. In the **Content** pane on the right, select **Get transcription preview** to see a transcription of the recorded message.
@@ -362,6 +373,7 @@ You are going to build an Azure AI Content Understanding analyzer that can extra
     </video>
 
     **Note**: This video was generated using AI.
+    {: .lab-note .info .compact}
 
 1. When analysis is complete, review the results, which should look similar to this:
 
@@ -388,6 +400,7 @@ Now that you have trained a model to extract fields from conference call recordi
     </video>
 
     **Note**: This video was generated using AI.
+    {: .lab-note .info .compact}
 
 1. Review the **Fields** pane, and view the fields that the analyzer extracted for the conference call video.
 1. Review the **Results** pane to see the JSON response that the analyzer would return to a client application.

@@ -14,6 +14,7 @@ In this exercise, you'll use Microsoft Foundry portal's prompt flow to create a 
 This exercise will take approximately **30** minutes.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Create a Foundry hub and project
 
@@ -30,8 +31,11 @@ The features of Foundry we're going to use in this exercise require a project th
     - **Region**:  East US 2 or Sweden Central (*In the event of a quota limit being exceeded later in the exercise, you may need to create another resource in a different region.*)
 
     > **Note**: If you're working in an Azure subscription in which policies are used to restrict allowable resource names, you may need to use the link at the bottom of the **Create a new project** dialog box to create the hub using the Azure portal.
+    {: .lab-note .info .compact}
 
     > **Tip**: If the **Create** button is still disabled, be sure to rename your hub to a unique alphanumeric value.
+    {: .lab-note .important .compact}
+
 
 1. Wait for your project to be created.
 
@@ -72,6 +76,7 @@ Now you're ready to deploy a generative AI language model to support your prompt
     - **Content filter**: DefaultV2
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may experience errors if the rate limit is exceeded.
+    {: .lab-note .info .compact}
 
 1. Wait for the deployment to complete.
 
@@ -85,6 +90,8 @@ A prompt flow provides a way to orchestrate prompts and other activities to defi
     A simple chat flow is created for you.
 
     > **Tip**: If a permissions error occurs. Wait a few minutes and try again, specifying a different flow name if necessary.
+    {: .lab-note .important .compact}
+
 
 1. To be able to test your flow, you need compute, and it can take a while to start; so select **Start compute session** to get it started while you explore and modify the default flow.
 
@@ -139,6 +146,7 @@ A prompt flow provides a way to orchestrate prompts and other activities to defi
 1. Save the changes to the flow.
 
     > **Note**: In this exercise, we'll stick to a simple chat flow, but note that the prompt flow editor includes many other tools that you could add to the flow, enabling you to create complex logic to orchstrate conversations.
+    {: .lab-note .info .compact}
 
 ## Test the flow
 
@@ -155,6 +163,7 @@ Now that you've developed the flow, you can use the chat window to test it.
 When you're satisfied with the behavior of the flow you created, you can deploy the flow.
 
 > **Note**: Deployment can take a long time, and can be impacted by capacity constraints in your subscription or tenant.
+{: .lab-note .info .compact}
 
 1. On the toolbar, select **Deploy** and deploy the flow with the following settings:
     - **Basic settings**:
@@ -174,6 +183,8 @@ When you're satisfied with the behavior of the flow you created, you can deploy 
 1. When the deployment has *succeeded*, select it. Then, view its **Test** page.
 
     > **Tip**: If the test page describes the endpoint as unhealthy, return to the **models and endpoints** and wait a minute or so before refreshing the view and selecting the endpoint again.
+    {: .lab-note .important .compact}
+
 
 1. Enter the prompt `What is there to do in San Francisco?` and review the response.
 1. Enter the prompt `Tell me something about the history of the city.` and review the response.

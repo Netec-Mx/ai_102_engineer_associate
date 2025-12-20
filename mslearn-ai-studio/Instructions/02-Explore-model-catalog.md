@@ -7,7 +7,7 @@ prev: /mslearn-ai-studio/Instructions/01-Explore-ai-studio
 next: /mslearn-ai-studio/Instructions/02a-AI-foundry-sdk
 ---
 
-# Choose and deploy a language model
+# Lab2: Choose and deploy a language model
 
 The Microsoft Foundry model catalog serves as a central repository where you can explore and use a variety of models, facilitating the creation of your generative AI scenario.
 
@@ -16,6 +16,7 @@ In this exercise, you'll explore the model catalog in Foundry portal, and compar
 This exercise will take approximately **25** minutes.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Explore models
 
@@ -81,6 +82,7 @@ To use a model, you need to create a Foundry *project*.
 1. Select **Create** and wait for your project to be created. If prompted, deploy the gpt-4o model using the **Global standard** deployment type and customize the deployment details to set a **Tokens per minute rate limit** of 50K (or the maximum available if less than 50K).
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may experience errors if the rate limit is exceeded.
+    {: .lab-note .info .compact}
 
 1. When your project is created, the chat playground will be opened automatically so you can test your model:
 

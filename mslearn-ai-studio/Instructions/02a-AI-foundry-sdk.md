@@ -7,11 +7,12 @@ prev: /mslearn-ai-studio/Instructions/02-Explore-model-catalog
 next: /mslearn-ai-studio/Instructions/04-Use-own-data
 ---
 
-# Create a generative AI chat app
+# Lab3: Create a generative AI chat app
 
 In this exercise, you use the Microsoft Foundry Python SDK to create a simple chat app that connects to a project and chats with a language model.
 
 > **Note**: This exercise is based on pre-release SDK software, which may be subject to change. Where necessary, we've used specific versions of packages; which may not reflect the latest available versions. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 While this exercise is based on the Foundry Python SDK, you can develop AI chat applications using multiple language-specific SDKs; including:
 
@@ -57,6 +58,7 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 1. In the **Endpoints and keys** area, ensure that the **Foundry** library is selected and view the **Foundry project endpoint**. You'll use this endpoint to connect to your project and model in a client application.
 
     > **Note**: You can also use the Azure OpenAI endpoint!
+    {: .lab-note .info .compact}
 
 1. Open a new browser tab (keeping the Foundry portal open in the existing tab). Then in the new tab, browse to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`; signing in with your Azure credentials if prompted.
 
@@ -67,6 +69,7 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -79,7 +82,8 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
    git clone https://github.com/microsoftlearning/mslearn-ai-studio mslearn-ai-foundry
     ```
 
-    > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.{: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the chat application code files and view them:
 
@@ -112,7 +116,8 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 
 ### Write code to connect to your project and chat with your model
 
-> **Tip**: As you add code, be sure to maintain the correct indentation.
+> **Tip**: As you add code, be sure to maintain the correct indentation.{: .lab-note .important .compact}
+
 
 1. Enter the following command to edit the code file that has been provided:
 
@@ -132,7 +137,8 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 1. In the **main** function, under the comment **Get configuration settings**, note that the code loads the project connection string and model deployment name values you defined in the configuration file.
 1. Find the comment **Initialize the project client**, and add the following code to connect to your Foundry project:
 
-    > **Tip**: Be careful to maintain the correct indentation level for your code.
+    > **Tip**: Be careful to maintain the correct indentation level for your code. {: .lab-note .important .compact}
+
 
     ```python
    # Initialize the project client
@@ -186,7 +192,7 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
-    > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.{: .lab-note .info .compact}
     
 1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry hub if prompted.
 1. After you have signed in, enter the following command to run the application:
@@ -199,7 +205,8 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 1. Try some follow-up questions, like `Where can I see one?` or `Are they endangered?`. The conversation should continue, using the chat history as context for each iteration.
 1. When you're finished, enter `quit` to exit the program.
 
-> **Tip**: If the app fails because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.
+> **Tip**: If the app fails because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.{: .lab-note .important .compact}
+
 
 ## Summary
 

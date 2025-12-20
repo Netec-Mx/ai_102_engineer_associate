@@ -7,11 +7,12 @@ prev: /mslearn-ai-vision/Instructions/Labs/04-image-classification
 next: /mslearn-ai-vision/Instructions/Labs/09-dall-e
 ---
 
-# Develop a vision-enabled chat app
+# Lab21: Develop a vision-enabled chat app
 
 In this exercise, you use the *Phi-4-multimodal-instruct* generative AI model to generate responses to prompts that include images. You'll develop an app that provides AI assistance with fresh produce in a grocery store by using Azure AI Foundry and the Azure AI Model Inference service.
 
 > **Note**: This exercise is based on pre-release SDK software, which may be subject to change. Where necessary, we've used specific versions of packages; which may not reflect the latest available versions. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 While this exercise is based on the Azure AI Foundry Python SDK, you can develop AI chat applications using multiple language-specific SDKs; including:
 
@@ -36,6 +37,7 @@ Let's start by signing into Azure AI Foundry portal.
 An Azure AI *project* provides a collaborative workspace for AI development. Let's start by choosing a model that we want to work with and creating a project to use it in.
 
 > **Note**: AI Foundry projects can be based on an *Azure AI Foundry* resource, which provides access to AI models (including Azure OpenAI), Azure AI services, and other resources for developing AI agents and chat solutions. Alternatively, projects can be based on *AI hub* resources; which include connections to Azure resources for secure storage, compute, and specialized tools. Azure AI Foundry based projects are great for developers who want to manage resources for AI agent or chat app development. AI hub based projects are more suitable for enterprise development teams working on complex AI solutions.
+{: .lab-note .info .compact}
 
 1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` model; which we'll use in our project.
 
@@ -90,6 +92,7 @@ Now that you've deployed the model, you can use the deployment in a client appli
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -103,6 +106,8 @@ Now that you've deployed the model, you can use the deployment in a client appli
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the application code files:  
 
@@ -135,6 +140,8 @@ Now that you've deployed the model, you can use the deployment in a client appli
 ### Write code to connect to your project and get a chat client for your model
 
 > **Tip**: As you add code, be sure to maintain the correct indentation.
+    {: .lab-note .important .compact}
+
 
 1. Enter the following command to edit the code file that has been provided:
 
@@ -156,6 +163,8 @@ Now that you've deployed the model, you can use the deployment in a client appli
 1. Find the comment **Initialize the project client**, and add the following code to connect to your Azure AI Foundry project:
 
     > **Tip**: Be careful to maintain the correct indentation level for your code.
+    {: .lab-note .important .compact}
+
 
     ```python
    # Initialize the project client
@@ -215,6 +224,7 @@ Now that you've deployed the model, you can use the deployment in a client appli
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
     > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    {: .lab-note .info .compact}
     
 1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Azure AI Foundry hub if prompted.
 
@@ -280,6 +290,7 @@ Now that you've deployed the model, you can use the deployment in a client appli
 15. Review the response. Then enter `quit` to exit the program.
 
     > **Note**: In this simple app, we haven't implemented logic to retain conversation history; so the model will treat each prompt as a new request with no context of the previous prompt.
+    {: .lab-note .info .compact}
 
 ## Clean up
 

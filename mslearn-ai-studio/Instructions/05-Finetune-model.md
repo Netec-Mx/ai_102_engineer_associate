@@ -18,6 +18,7 @@ Imagine you work for a travel agency and you're developing a chat application to
 This exercise will take approximately **60** minutes\*.
 
 > \* **Note**: This timing is an estimate based on the average experience. Fine-tuning is dependent on cloud infrastructure resources, which can take a variable amount of time to provision depending on data center capacity and concurrent demand. Some activities in this exercise may take a <u>long</u> time to complete, and require patience. If things are taking a while, consider reviewing the [Microsoft Foundry fine-tuning documentation](https://learn.microsoft.com/azure/ai-studio/concepts/fine-tuning-overview) or taking a break. It is possible some processes may time-out or appear to run indefinitely. Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Deploy a model in a Microsoft Foundry project
 
@@ -44,6 +45,7 @@ Let's start by deploying a model in a Foundry project.
 1. Select **Create** and wait for your project to be created. If prompted, deploy the gpt-4o model using the **Global standard** deployment type and customize the deployment details to set a **Tokens per minute rate limit** of 50K (or the maximum available if less than 50K).
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may experience errors if the rate limit is exceeded.
+    {: .lab-note .info .compact}
 
 1. When your project is created, the chat playground will be opened automatically so you can test your model:
 1. In the **Setup** pane, note the name of your model deployment; which should be **gpt-4o**. You can confirm this by viewing the deployment in the **Models and endpoints** page (just open that page in the navigation pane on the left).
@@ -58,6 +60,7 @@ Because fine-tuning a model takes some time to complete, you'll start the fine-t
 1. Download the [training dataset](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-studio/refs/heads/main/data/travel-finetune-hotel.jsonl) at `https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-studio/refs/heads/main/data/travel-finetune-hotel.jsonl`and save it as a JSONL file locally.
 
     > **Note**: Your device might default to saving the file as a .txt file. Select all files and remove the .txt suffix to ensure you're saving the file as JSONL.
+    {: .lab-note .info .compact}
 
 1. Navigate to the **Fine-tuning** page under the **Build and customize** section, using the menu on the left.
 1. Select the button to add a new fine-tune model, select the **gpt-4o** model and then select **Next**.
@@ -70,6 +73,7 @@ Because fine-tuning a model takes some time to complete, you'll start the fine-t
 1. Submit the fine-tuning details, and the job will start. It may take some time to complete. You can continue with the next section of the exercise while you wait.
 
 > **Note**: Fine-tuning and deployment can take a significant amount of time (30 minutes or longer), so you may need to check back periodically. You can see more details of the progress so far by selecting the fine-tuning model job and viewing its **Logs** tab.
+{: .lab-note .info .compact}
 
 ## Chat with a base model
 
@@ -136,6 +140,8 @@ When fine-tuning has successfully completed, you can deploy the fine-tuned model
 1. Navigate to the **Fine-tuning** page under **Build and customize** to find your fine-tuning job and its status. If it's still running, you can opt to continue chatting with your deployed base model or take a break. If it's completed, you can continue.
 
     > **Tip**: Use the **Refresh** button in the fine-tuning page to refresh the view. If the fine-tuning job disappears entirely, refresh the page in the browser.
+    {: .lab-note .important .compact}
+
 
 1. Select the fine-tuning job link to open its details page. Then, select the **Metrics** tab and explore the fine-tune metrics.
 1. Deploy the fine-tuned model with the following configurations:

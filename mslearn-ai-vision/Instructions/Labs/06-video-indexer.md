@@ -12,6 +12,7 @@ next: /lab2/lab2/
 A large proportion of the data created and consumed today is in the format of video. **Azure AI Video Indexer** is an AI-powered service that you can use to index videos and extract insights from them.
 
 > **Note**: From June 21st 2022, capabilities of Azure AI services that return personally identifiable information are restricted to customers who have been granted [limited access](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-limited-access). Without getting limited access approval, recognizing people and celebrities with Video Indexer for this lab is not available. For more details about the changes Microsoft has made, and why - see [Responsible AI investments and safeguards for facial recognition](https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/).
+{: .lab-note .info .compact}
 
 ## Upload a video to Video Indexer
 
@@ -27,6 +28,7 @@ First, you'll need to sign into the Video Indexer portal and upload a video.
 1. After the file has uploaded, wait a few minutes while Video Indexer automatically indexes it.
 
 > **Note**: In this exercise, we're using this video to explore Video Indexer functionality; but you should take the time to watch it in full when you've finished the exercise as it contains useful information and guidance for developing AI-enabled applications responsibly! 
+{: .lab-note .info .compact}
 
 ## Review video insights
 
@@ -35,6 +37,7 @@ The indexing process extracts insights from the video, which you can view in the
 1. In the Video Indexer portal, when the video is indexed, select it to view it. You'll see the video player alongside a pane that shows insights extracted from the video.
 
     > **Note**: Due to the limited access policy to protect individuals identities, you may not see names when you index the video.
+    {: .lab-note .info .compact}
 
     ![Video Indexer with a video player and Insights pane](../media/video-indexer-insights.png)
 
@@ -82,8 +85,10 @@ Video Indexer provides a REST API that you can use to upload and manage videos i
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
     > **Note**: If the portal asks you to select a storage to persist your files, choose **No storage account required**, select the subscription you are using and press **Apply**.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -92,6 +97,8 @@ Video Indexer provides a REST API that you can use to upload and manage videos i
 1. Resize the cloud shell pane so you can see more of it.
 
     > **Tip**" You can resize the pane by dragging the top border. You can also use the minimize and maximize buttons to switch between the cloud shell and the main portal interface.
+    {: .lab-note .important .compact}
+
 
 1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the command, or copy it to the clipboard and then right-click in the command line and paste as plain text):
 
@@ -101,6 +108,8 @@ Video Indexer provides a REST API that you can use to upload and manage videos i
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the application code file for this exercise:  
 

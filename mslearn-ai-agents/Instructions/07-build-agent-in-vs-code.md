@@ -14,6 +14,7 @@ In this exercise, you'll use the Microsoft Foundry VS Code extension to create a
 This exercise should take approximately **30** minutes to complete.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Prerequisites
 
@@ -44,6 +45,7 @@ Now you'll connect to your Azure resources and create a new AI Foundry project.
 1. In the Resources view, select **Sign in to Azure...** and follow the authentication prompts.
 
    > **Note**: You won't see this option if you're already signed in.
+   {: .lab-note .info .compact}
 
 1. Create a new Foundry project by selecting the **+** (plus) icon next to **Resources** in the Foundry Extension view.
 
@@ -70,6 +72,7 @@ You'll need a deployed model to use with your agent.
 1. When the "Project deployed successfully" popup appears, select the **Deploy a model** button. This opens the Model Catalog.
 
    > **Tip**: You can also access the Model Catalog by selecting the **+** icon next to **Models** in the Resources section, or by pressing **F1** and running the command **Microsoft Foundry: Open Model Catalog**.
+   {: .lab-note .important .compact}
 
 1. In the Model Catalog, locate the **gpt-4** model (you can use the search bar to find it quickly).
 

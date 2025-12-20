@@ -7,7 +7,7 @@ prev: /mslearn-ai-information-extraction/Instructions/Labs/04-custom-doc-intelli
 next: /mslearn-ai-studio/Instructions/01-Explore-ai-studio
 ---
 
-# Create a knowledge mining solution
+# Lab27: Create a knowledge mining solution
 
 In this exercise, you use AI Search to index a set of documents maintained by Margie's Travel, a fictional travel agency. The indexing process involves using AI skills to extract key information to make them searchable, and generating a knowledge store containing data assets for further analysis.
 
@@ -52,6 +52,8 @@ The solution you will create for Margie's Travel requires multiple resources in 
 1. Wait for deployment to complete, and then go to the deployed resource.
 
     > **Tip**: Keep the storage account portal page open - you will use it in the next procedure.
+    {: .lab-note .important .compact}
+
 
 ## Upload documents to Azure Storage
 
@@ -69,6 +71,7 @@ Your knowledge mining solution will extract information from travel brochure doc
     - **Anonymous access level**: Private (no anonymous access)\*
 
     > **Note**: \*Unless you enabled the option to allow anonymous container access when creating your storage account, you won't be able to select any other setting!
+    {: .lab-note .info .compact}
 
 1. Select the **documents** container to open it, and then use the **Upload** toolbar button to upload the .pdf files you extracted from **documents.zip** previously into the root of the container, as shown here:
 
@@ -108,6 +111,7 @@ Now that you have the documents in place, you can create an indexer to extract i
 1. In the **Attach Azure AI Services** section, select **Free (limited enrichments**)\*.
 
     > **Note**: \*The free Azure AI Services resource for Azure AI Search can be used to index a maximum of 20 documents. In a real solution, you should create an Azure AI Services resource in your subscription to enable AI enrichment for a larger number of documents.
+    {: .lab-note .info .compact}
 
 1. In the **Add enrichments** section:
     - Change the **Skillset name** to `margies-skillset`.
@@ -230,6 +234,7 @@ Now that you have an index, you can search it.
 Now that you have a useful index, you can use it from a client application. You can do this by consuming the REST interface, submitting requests and receiving responses in JSON format over HTTP; or you can use the software development kit (SDK) for your preferred programming language. In this exercise, we'll use the SDK.
 
 > **Note**: You can choose to use the SDK for either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
+{: .lab-note .info .compact}
 
 ### Get the endpoint and keys for your search resource
 
@@ -261,6 +266,8 @@ Now that you have a useful index, you can use it from a client application. You 
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the application code files:
 
@@ -294,6 +301,8 @@ Now that you have a useful index, you can use it from a client application. You 
 1. When you've updated the placeholders, use the **CTRL+S** command to save the file and then use the **CTRL+Q** command to close it.
 
     > **Tip**: Now that you've copied the endpoint and key from the Azure portal, you might want to maximize the cloud shell pane to make it easier to work in.
+    {: .lab-note .important .compact}
+
 
 1. Run the following command to open the code file for your app:
 

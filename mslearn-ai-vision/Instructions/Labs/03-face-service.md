@@ -7,11 +7,12 @@ prev: /mslearn-ai-vision/Instructions/Labs/02-ocr
 next: /mslearn-ai-vision/Instructions/Labs/04-image-classification
 ---
 
-# Detect and analyze faces
+# Lab19: Detect and analyze faces
 
 The ability to detect and analyze human faces is a core AI capability. In this exercise, you'll explore the **Face** service to work with faces.
 
 > **Note**: This exercise is based on pre-release SDK software, which may be subject to change. Where necessary, we've used specific versions of packages; which may not reflect the latest available versions. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 While this exercise is based on the Azure Vision Face Python SDK, you can develop vision applications using multiple language-specific SDKs; including:
 
@@ -22,12 +23,14 @@ While this exercise is based on the Azure Vision Face Python SDK, you can develo
 This exercise takes approximately **30** minutes.
 
 > **Note**: Capabilities of Azure AI services that return personally identifiable information are restricted to customers who have been granted [limited access](https://learn.microsoft.com/legal/cognitive-services/computer-vision/limited-access-identity). This exercise does not include facial recognition tasks, and can be completed without requesting any additional access to restricted features.
+{: .lab-note .info .compact}
 
 ## Provision an Azure AI Face API resource
 
 If you don't already have one in your subscription, you'll need to provision an Azure AI Face API resource.
 
 > **Note**: In this exercise, you'll use a standalone **Face** resource. You can also use Azure AI Face services in an *Azure AI Services* multi-service resource, either directly or in an *Azure AI Foundry* project.
+{: .lab-note .info .compact}
 
 1. Open the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`, and sign in using your Azure credentials. Close any welcome messages or tips that are displayed.
 1. Select **Create a resource**.
@@ -52,8 +55,10 @@ In this exercise, you'll complete a partially implemented client application tha
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
     > **Note**: If the portal asks you to select a storage to persist your files, choose **No storage account required**, select the subscription you are using and press **Apply**.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -62,6 +67,8 @@ In this exercise, you'll complete a partially implemented client application tha
 1. Resize the cloud shell pane so you can still see the **Keys and Endpoint** page for your Face resource.
 
     > **Tip**" You can resize the pane by dragging the top border. You can also use the minimize and maximize buttons to switch between the cloud shell and the main portal interface.
+    {: .lab-note .important .compact}
+
 
 1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the command, or copy it to the clipboard and then right-click in the command line and paste as plain text):
 
@@ -71,6 +78,8 @@ In this exercise, you'll complete a partially implemented client application tha
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, use the following command to navigate to the application code files:
 
@@ -109,6 +118,8 @@ In this exercise, you'll complete a partially implemented client application tha
     ```
 
     > **Tip**: You might want to maximize the cloud shell pane and move the split-bar between the command line cosole and the code editor so you can see the code more easily.
+    {: .lab-note .important .compact}
+
 
 1. In the code file, find the comment **Import namespaces**, and add the following code to import the namespaces you will need to use the Azure AI Vision SDK:
 

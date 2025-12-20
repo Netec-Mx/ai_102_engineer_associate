@@ -21,6 +21,7 @@ This exercise takes approximately **30** minutes.
 
 > **NOTE**
 > This exercise is designed to be completed in the Azure cloud shell, where direct access to your computer's sound hardware is not supported. The lab will therefore use audio files for speech input and output streams. The code to achieve the same results using a mic and speaker is provided for your reference.
+{: .lab-note .info .compact}
 
 ## Create an Azure AI Speech resource
 
@@ -43,6 +44,7 @@ Let's start by creating an Azure AI Speech resource.
 1. Leaving the **Keys and Endpoint** page open, use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -56,6 +58,8 @@ Let's start by creating an Azure AI Speech resource.
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the code files:
 
@@ -93,6 +97,8 @@ Let's start by creating an Azure AI Speech resource.
 ## Add code to use the Azure AI Speech SDK
 
 > **Tip**: As you add code, be sure to maintain the correct indentation.
+    {: .lab-note .important .compact}
+
 
 1. Enter the following command to edit the code file that has been provided:
 
@@ -172,16 +178,19 @@ Now that you have a **SpeechTranslationConfig** for the Azure AI Speech service,
 1. When prompted, enter a valid language code (*fr*, *es*, or *hi*). The program should transcribe your input file and translate it to the language you specified (French, Spanish, or Hindi). Repeat this process, trying each language supported by the application.
 
     > **NOTE**: The translation to Hindi may not always be displayed correctly in the Console window due to character encoding issues.
+    {: .lab-note .info .compact}
 
 1. When you're finished, press ENTER to end the program.
 
 > **NOTE**: The code in your application translates the input to all three languages in a single call. Only the translation for the specific language is displayed, but you could retrieve any of the translations by specifying the target language code in the **translations** collection of the result.
+{: .lab-note .info .compact}
 
 ## Synthesize the translation to speech
 
 So far, your application translates spoken input to text; which might be sufficient if you need to ask someone for help while traveling. However, it would be better to have the translation spoken aloud in a suitable voice.
 
 > **Note**: Due to the hardware limitations of the cloud shell, we'll direct the synthesized speech output to a file.
+{: .lab-note .info .compact}
 
 1. In the **Translate** function, find the comment **Synthesize translation**, and add the following code to use a **SpeechSynthesizer** client to synthesize the translation as speech and save it as a .wav file:
 
@@ -220,6 +229,7 @@ So far, your application translates spoken input to text; which might be suffici
 
 > **NOTE**
 > *In this example, you've used a **SpeechTranslationConfig** to translate speech to text, and then used a **SpeechConfig** to synthesize the translation as speech. You can in fact use the **SpeechTranslationConfig** to synthesize the translation directly, but this only works when translating to a single language, and results in an audio stream that is typically saved as a file.*
+{: .lab-note .info .compact}
 
 ## Clean up resources
 
@@ -249,6 +259,7 @@ In this exercise, the Azure Cloud Shell environment we used doesn't support audi
     ```
 
 > **Note**: The system default microphone is the default audio input, so you could also just omit the AudioConfig altogether!
+{: .lab-note .info .compact}
 
 ### Using speech synthesis with a speaker
 
@@ -270,6 +281,7 @@ In this exercise, the Azure Cloud Shell environment we used doesn't support audi
     ```
 
 > **Note**: The system default speaker is the default audio output, so you could also just omit the AudioConfig altogether!
+{: .lab-note .info .compact}
 
 ## More information
 

@@ -7,13 +7,14 @@ prev: /mslearn-ai-studio/Instructions/06-Explore-content-filters
 next: /mslearn-ai-agents/Instructions/01-agent-fundamentals
 ---
 
-# Evaluate generative AI model performance
+# Lab6: Evaluate generative AI model performance
 
 In this exercise, you'll use manual and automated evaluations to assess the performance of a model in the Microsoft Foundry portal.
 
 This exercise will take approximately **30** minutes.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Create a Foundry hub and project
 
@@ -34,8 +35,11 @@ The features of Foundry we're going to use in this exercise require a project th
         - Sweden Central
 
     > **Note**: If you're working in an Azure subscription in which policies are used to restrict allowable resource names, you may need to use the link at the bottom of the **Create a new project** dialog box to create the hub using the Azure portal.
+    {: .lab-note .info .compact}
 
     > **Tip**: If the **Create** button is still disabled, be sure to rename your hub to a unique alphanumeric value.
+    {: .lab-note .important .compact}
+
 
 1. Wait for your project to be created.
 
@@ -56,6 +60,7 @@ In this exercise, you'll evaluate the performance of a gpt-4o-mini model. You'll
     - **Content filter**: DefaultV2
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may experience errors if the rate limit is exceeded.
+    {: .lab-note .info .compact}
 
 1. Wait for the deployment to complete.
 1. Return to the **Models + endpoints** page and repeat the previous steps to deploy a **gpt-4o-mini** model with the same settings.

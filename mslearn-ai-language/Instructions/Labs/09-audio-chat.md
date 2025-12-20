@@ -7,7 +7,7 @@ prev: /mslearn-ai-language/Instructions/Labs/07-speech
 next: /mslearn-ai-vision/Instructions/Labs/01-analyze-images
 ---
 
-# Develop an audio-enabled chat app
+# Lab16: Develop an audio-enabled chat app
 
 In this exercise, you use the *Phi-4-multimodal-instruct* generative AI model to generate responses to prompts that include audio files. You'll develop an app that provides AI assistance for a produce supplier company by using Azure AI Foundry and the Python OpenAI SDK to summarize voice messages left by customers.
 
@@ -52,6 +52,7 @@ Let's start by deploying a model in an Azure AI Foundry project.
 1. In the navigation pane on the left, select **Overview** to see the main page for your project; which looks like this:
 
     > **Note**: If an *Insufficient permissions** error is displayed, use the **Fix me** button to resolve it.
+    {: .lab-note .info .compact}
 
     ![Screenshot of a Azure AI Foundry project overview page.](../media/ai-foundry-project.png)
 
@@ -60,6 +61,8 @@ Let's start by deploying a model in an Azure AI Foundry project.
 Now that you deployed a model, you can use the Azure AI Foundry and Azure AI Model Inference SDKs to develop an application that chats with it.
 
 > **Tip**: You can choose to develop your solution using Python or Microsoft C#. Follow the instructions in the appropriate section for your chosen language.
+    {: .lab-note .important .compact}
+
 
 ### Prepare the application configuration
 
@@ -74,6 +77,7 @@ Now that you deployed a model, you can use the Azure AI Foundry and Azure AI Mod
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -87,6 +91,8 @@ Now that you deployed a model, you can use the Azure AI Foundry and Azure AI Mod
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the application code files:  
 
@@ -117,6 +123,8 @@ Now that you deployed a model, you can use the Azure AI Foundry and Azure AI Mod
 ### Write code to connect to your project and get a chat client for your model
 
 > **Tip**: As you add code, be sure to maintain the correct indentation.
+    {: .lab-note .important .compact}
+
 
 1. Enter the following command to edit the code file:
 
@@ -137,6 +145,8 @@ Now that you deployed a model, you can use the Azure AI Foundry and Azure AI Mod
 1. Find the comment **Initialize the project client** and add the following code to connect to your Azure AI Foundry project:
 
     > **Tip**: Be careful to maintain the correct indentation level for your code.
+    {: .lab-note .important .compact}
+
 
     ```python
    # Initialize the project client
@@ -212,6 +222,7 @@ Before submitting the prompt, we need to encode the audio file for the request. 
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
     > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    {: .lab-note .info .compact}
     
 1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Azure AI Foundry hub if prompted.
 
@@ -259,12 +270,14 @@ Before submitting the prompt, we need to encode the audio file for the request. 
 1. Review the response. Then enter `quit` to exit the program.
 
     > **Note**: In this simple app, we haven't implemented logic to retain conversation history; so the model will treat each prompt as a new request with no context of the previous prompt.
+    {: .lab-note .info .compact}
 
 1. You can continue to run the app, choosing different prompt types and trying different prompts. When you're finished, enter `quit` to exit the program.
 
     If you have time, you can modify the code to use a different system prompt and your own internet-accessible audio files.
 
     > **Note**: In this simple app, we haven't implemented logic to retain conversation history; so the model will treat each prompt as a new request with no context of the previous prompt.
+    {: .lab-note .info .compact}
 
 ## Summary
 

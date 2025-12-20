@@ -7,7 +7,7 @@ prev: /mslearn-ai-vision/Instructions/Labs/03-face-service
 next: /mslearn-ai-vision/Instructions/Labs/08-gen-ai-vision
 ---
 
-# Classify images
+# Lab20: Classify images
 
 The **Azure AI Custom Vision** service enables you to create computer vision models that are trained on your own images. You can use it to train *image classification* and *object detection* models; which you can then publish and consume from applications.
 
@@ -42,6 +42,7 @@ Before you can train a model, you will need Azure resources for *training* and *
 1. Create the resource and wait for deployment to complete, and then view the deployment details. Note that two Custom Vision resources are provisioned; one for training, and another for prediction.
 
     > **Note**: Each resource has its own *endpoint* and *keys*, which are used to manage access from your code. To train an image classification model, your code must use the *training* resource (with its endpoint and key); and to use the trained model to predict image classes, your code must use the *prediction* resource (with its endpoint and key).
+    {: .lab-note .info .compact}
 
 1. When the resources have been deployed, go to the resource group to view them. You should see two custom vision resources, one with the suffix ***-Prediction***.
 
@@ -79,6 +80,7 @@ To train an image classification model, you need to create a Custom Vision proje
     ![Screenshot of model metrics.](../media/custom-vision-metrics.png)
 
 > **Note**: The performance metrics are based on a probability threshold of 50% for each prediction (in other words, if the model calculates a 50% or higher probability that an image is of a particular class, then that class is predicted). You can adjust this at the top-left of the page.
+{: .lab-note .info .compact}
 
 ### Test the model
 
@@ -114,8 +116,10 @@ The Custom Vision portal provides a convenient user interface that you can use t
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
     > **Note**: If the portal asks you to select a storage to persist your files, choose **No storage account required**, select the subscription you are using and press **Apply**.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -124,6 +128,8 @@ The Custom Vision portal provides a convenient user interface that you can use t
 1. Resize the cloud shell pane so you can see more of it.
 
     > **Tip**" You can resize the pane by dragging the top border. You can also use the minimize and maximize buttons to switch between the cloud shell and the main portal interface.
+    {: .lab-note .important .compact}
+
 
 1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the command, or copy it to the clipboard and then right-click in the command line and paste as plain text):
 
@@ -133,6 +139,8 @@ The Custom Vision portal provides a convenient user interface that you can use t
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, use the following command to navigate to the application code files:
 

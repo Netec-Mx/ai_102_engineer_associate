@@ -12,10 +12,12 @@ next: /lab2/lab2/
 In this exercise you'll explore creating an agent that can use custom functions as a tool to complete tasks. You'll build a simple technical support agent that can collect details of a technical problem and generate a support ticket.
 
 > **Tip**: The code used in this exercise is based on the for Microsoft Foundry SDK for Python. You can develop similar solutions using the SDKs for Microsoft .NET, JavaScript, and Java. Refer to [Microsoft Foundry SDK client libraries](https://learn.microsoft.com/azure/ai-foundry/how-to/develop/sdk-overview) for details.
+{: .lab-note .important .compact}
 
 This exercise should take approximately **30** minutes to complete.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Create a Foundry project
 
@@ -41,6 +43,7 @@ Let's start by creating a Foundry project.
 1. If prompted, deploy a **gpt-4o** model using either the *Global Standard* or *Standard* deployment option (depending on your quota availability).
 
     >**Note**: If quota is available, a GPT-4o base model may be deployed automatically when creating your Agent and project.
+    {: .lab-note .info .compact}
 
 1. When your project is created, the Agents playground will be opened.
 
@@ -65,6 +68,7 @@ Now that you've created your project in AI Foundry, let's develop an app that im
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -78,6 +82,7 @@ Now that you've created your project in AI Foundry, let's develop an app that im
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer and the cursor on the current line may be obscured. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
 
 1. Enter the following command to change the working directory to the folder containing the code files and list them all.
 
@@ -154,6 +159,7 @@ Now that you've created your project in AI Foundry, let's develop an app that im
     ```
 
     > **Tip**: As you add code to the code file, be sure to maintain the correct indentation.
+    {: .lab-note .important .compact}
 
 1. Review the existing code, which retrieves the application configuration settings and sets up a loop in which the user can enter prompts for the agent. The rest of the file includes comments where you'll add the necessary code to implement your technical support agent.
 1. Find the comment **Add references** and add the following code to import the classes you'll need to build an Azure AI agent that uses your function code as a tool:
@@ -169,6 +175,7 @@ Now that you've created your project in AI Foundry, let's develop an app that im
 1. Find the comment **Connect to the Agent client** and add the following code to connect to the Azure AI project using the current Azure credentials.
 
     > **Tip**: Be careful to maintain the correct indentation level.
+    {: .lab-note .important .compact}
 
     ```python
    # Connect to the Agent client
@@ -220,6 +227,7 @@ Now that you've created your project in AI Foundry, let's develop an app that im
     ```
 
     > **Note**: Using the **create_and_process** method to run the thread enables the agent to automatically find your functions and choose to use them based on their names and parameters. As an alternative, you could use the **create_run** method, in which case you would be responsible for writing code to poll for run status to determine when a function call is required, call the function, and return the results to the agent.
+    {: .lab-note .info .compact}
 
 1. Find the comment **Check the run status for failures** and add the following code to show any errors that occur.
 
@@ -283,6 +291,7 @@ Now that you've created your project in AI Foundry, let's develop an app that im
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
     > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    {: .lab-note .info .compact}
     
 1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry hub if prompted.
 1. After you have signed in, enter the following command to run the application:
@@ -300,6 +309,7 @@ Now that you've created your project in AI Foundry, let's develop an app that im
     ```
 
     > **Tip**: If the app fails because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.
+    {: .lab-note .important .compact}
 
 1. View the response. The agent may ask for your email address and a description of the issue. You can use any email address (for example, `alex@contoso.com`) and any issue description (for example `my computer won't start`)
 

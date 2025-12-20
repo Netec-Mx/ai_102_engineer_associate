@@ -42,6 +42,7 @@ Before you can train a model, you will need Azure resources for *training* and *
 1. Create the resource and wait for deployment to complete, and then view the deployment details. Note that two Custom Vision resources are provisioned; one for training, and another for prediction.
 
     > **Note**: Each resource has its own *endpoint* and *keys*, which are used to manage access from your code. To train an image classification model, your code must use the *training* resource (with its endpoint and key); and to use the trained model to predict image classes, your code must use the *prediction* resource (with its endpoint and key).
+    {: .lab-note .info .compact}
 
 1. When the resources have been deployed, go to the resource group to view them. You should see two custom vision resources, one with the suffix ***-Prediction***.
 
@@ -103,8 +104,10 @@ You can use the UI in the Custom Vision portal to tag your images, but many AI d
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
+    {: .lab-note .info .compact}
 
     > **Note**: If the portal asks you to select a storage to persist your files, choose **No storage account required**, select the subscription you are using and press **Apply**.
+    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -113,6 +116,8 @@ You can use the UI in the Custom Vision portal to tag your images, but many AI d
 1. Resize the cloud shell pane so you can see more of it.
 
     > **Tip**" You can resize the pane by dragging the top border. You can also use the minimize and maximize buttons to switch between the cloud shell and the main portal interface.
+    {: .lab-note .important .compact}
+
 
 1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the command, or copy it to the clipboard and then right-click in the command line and paste as plain text):
 
@@ -122,6 +127,8 @@ You can use the UI in the Custom Vision portal to tag your images, but many AI d
     ```
 
     > **Tip**: As you paste commands into the cloudshell, the ouput may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, use the following command to navigate to the application code files:
 
@@ -159,6 +166,7 @@ You can use the UI in the Custom Vision portal to tag your images, but many AI d
      JSON defines a list of images, each containing one or more tagged regions. Each tagged region includes a tag name, and the top and left coordinates and width and height dimensions of the bounding box containing the tagged object.
 
     > **Note**: The coordinates and dimensions in this file indicate relative points on the image. For example, a *height* value of 0.7 indicates a box that is 70% of the height of the image. Some tagging tools generate other formats of file in which the coordinate and dimension values represent pixels, inches, or other units of measurements.
+    {: .lab-note .info .compact}
 
 1. Close the JSON file without saving any changes (*CTRL_Q*).
 
@@ -191,6 +199,8 @@ Now that you've tagged the images in your project, you're ready to train a model
 1. Wait for training to complete (it might take ten minutes or so).
 
     > **Tip**: The Azure cloud shell has a 20-minute inactivity timeout, after which the session is abandoned. While you wait for training to finish, occassionally return to the cloud shell and enter a colland like `ls` to keep the session active.
+    {: .lab-note .important .compact}
+
 
 1. In the Custom Vision portal, when training has finished, review the *Precision*, *Recall*, and *mAP* performance metrics - these measure the prediction accuracy of the object detection model, and should all be high.
 1. At the top right of the page, click **Quick Test**, and then in the **Image URL** box, type `https://aka.ms/test-fruit` and click the *quick test image* (&#10132;) button.

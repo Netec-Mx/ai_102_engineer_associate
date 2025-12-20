@@ -7,7 +7,7 @@ prev: /mslearn-ai-information-extraction/Instructions/Labs/01-content-understand
 next: /mslearn-ai-information-extraction/Instructions/Labs/03-prebuilt-doc-intelligence-model
 ---
 
-# Develop a Content Understanding client application
+# Lab24: Develop a Content Understanding client application
 
 In this exercise, you use Azure AI Content Understanding to create an analyzer that extracts information from business cards. You'll then develop a client application that uses the analyzer to extract contact details from scanned business cards.
 
@@ -34,6 +34,8 @@ The features of Azure AI Foundry we're going to use in this exercise require a p
     > \*At the time of writing, Azure AI Content understanding is only available in these regions.
 
     > **Tip**: If the **Create** button is still disabled, be sure to rename your hub to a unique alphanumeric value.
+    {: .lab-note .important .compact}
+
 
 1. Wait for your project to be created, and then navigate to your project overview page.
 
@@ -50,6 +52,8 @@ You're going to use the REST API to create an analyzer that can extract informat
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Tip**: Resize the pane so you can work mostly in the cloud shell but still see the keys and endpoint in the Azure portal page - you'll need to copy them into your code.
+    {: .lab-note .important .compact}
+
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -63,6 +67,8 @@ You're going to use the REST API to create an analyzer that can extract informat
     ```
 
     > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
+    {: .lab-note .important .compact}
+
 
 1. After the repo has been cloned, navigate to the folder containing the code files for your app:
 
@@ -93,6 +99,8 @@ You're going to use the REST API to create an analyzer that can extract informat
 1. After you've replaced the placeholders, within the code editor, use the **CTRL+S** command to save your changes and then use the **CTRL+Q** command to close the code editor while keeping the cloud shell command line open.
 
     > **Tip**: You can maximize the cloud shell pane now.
+    {: .lab-note .important .compact}
+
 
 1. In the cloud shell command line, enter the following command to view the **biz-card.json** JSON file that has been provided:
 
@@ -172,6 +180,7 @@ You're going to use the REST API to create an analyzer that can extract informat
     - Confirms success (or failure) of the operation to the user.
 
     > **Note**: The code includes some deliberate time delays to avoid exceeding the request rate limit foe the service.
+    {: .lab-note .info .compact}
 
 1. Use the **CTRL+S** command to save the code changes, but keep the code editor pane open in case you need to correct any errors in the code. Resize the panes so you can clearly see the command line pane.
 1. In the cloud shell command line pane, enter the following command to run the Python code:
@@ -277,6 +286,7 @@ Now that you've created an analyzer, you can consume it from a client applicatio
     - If the operation has succeeded, saves the JSON response, and then parses the JSON and displays the values retrieved for each type-specific field.
 
     > **Note**: In our simple business card schema, all of the fields are strings. The code here illustrates the need to check the type of each field so that you can extract values of different types from a more complex schema.
+    {: .lab-note .info .compact}
 
 1. Use the **CTRL+S** command to save the code changes, but keep the code editor pane open in case you need to correct any errors in the code. Resize the panes so you can clearly see the command line pane.
 1. In the cloud shell command line pane, enter the following command to run the Python code:

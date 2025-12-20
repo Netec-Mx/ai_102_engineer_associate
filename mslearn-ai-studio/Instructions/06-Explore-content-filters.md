@@ -7,7 +7,7 @@ prev: /mslearn-ai-studio/Instructions/04-Use-own-data
 next: /mslearn-ai-studio/Instructions/07-Evaluate-prompt-flow
 ---
 
-# Apply content filters to prevent the output of harmful content
+# Lab5: Apply content filters to prevent the output of harmful content
 
 Microsoft Foundry includes default content filters to help ensure that potentially harmful prompts and completions are identified and removed from interactions with the service. Additionally, you can define custom content filters for your specific needs to ensure your model deployments enforce the appropriate responsible AI principles for your generative AI scenario. Content filtering is one element of an effective approach to responsible AI when working with generative AI models.
 
@@ -16,6 +16,7 @@ In this exercise, you'll explore the effects of content filters in Foundry.
 This exercise will take approximately **25** minutes.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
+{: .lab-note .info .compact}
 
 ## Deploy a model in a Foundry project
 
