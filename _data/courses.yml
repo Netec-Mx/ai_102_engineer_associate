@@ -5,7 +5,7 @@ ai_102_engineer_associate:
   labs:
       # EJEMPLO
     - id: lab1
-      title: "Explore AI  Studio"
+      title: "Explore AI  Studio00000"
       url:  "/mslearn-ai-studio/Instructions/01-Explore-ai-studio"
       duration: "30 min"
       # ESTRUCTURA COPIAR Y PEGAR CUANTAS VECES SEA NECESARIO
