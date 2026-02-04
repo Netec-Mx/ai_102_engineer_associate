@@ -44,18 +44,16 @@ An Azure AI *project* provides a collaborative workspace for AI development. Let
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
-1. Select **Create** and **wait for your project to be created**. If prompted, *Deploy gpt-4o* model. Then specify the following settings:
+1. Select **Create and continue** and **wait for your project to be created**. If prompted, *Deploy gpt-4o* model. Then specify the following settings:
 
     - From the *Deployment type* drop-down, select **Global standard**.
     - In the **Deployment details** section, select **Customize**, then set the **Tokens per Minute Rate Limit** to **50K** (or the maximum available if it is less than 50K).
-    - Select **Create resource and deploy**.
+    - Select **Deploy**.
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may experience errors if the rate limit is exceeded.
     {: .lab-note .info .compact}
 
-1. When your project is created, the **Chat playground** will be *opened automatically* so you can test your model:
 
-    ![Screenshot of a Foundry project chat playground.](./media/ai-foundry-chat-playground.png)
 
 1. In the navigation pane on the left, select **Overview** to see the main page for your project; which looks like this:
 
@@ -85,7 +83,8 @@ An Azure AI *project* provides a collaborative workspace for AI development. Let
 
 The Foundry project includes a number of **endpoints** that client applications can use to connect to the project and the models and AI services it includes.
 
-1. In the **Management center** page, in the navigation pane, under your project, select **Go to project**.
+1. In the **Management center** page, in the **left navigation pane**, **under your project**, select **Go to project**.
+
 1. In the project **Overview** page, view the **Endpoints and keys** section; which contains endpoints and authorization keys that you can use in your application code to access:
 
     - The Foundry project and any models deployed in it.
@@ -97,7 +96,8 @@ The Foundry project includes a number of **endpoints** that client applications 
 Now that you know something about the configuration of your Foundry project, you can return to the chat **Playground** to explore the model you deployed.
 
 1. In the navigation pane on the left for your project, select **Playgrounds** 
-1. Select **Try the Chat playground**, and ensure that your **gpt-4o** model deployment is selected in the **Deployment** section.
+1. In the **Chat playground** section, select **Try the Chat playground**, and ensure that your **gpt-4o** model deployment is selected in the **Deployment** section.
+
 1. In the **Setup** pane, in the **Give the model instructions and context** box, enter the following instructions:
 
     ```
