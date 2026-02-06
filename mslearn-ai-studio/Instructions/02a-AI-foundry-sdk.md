@@ -31,22 +31,30 @@ Let's start by deploying a model in a Foundry project.
     ![Screenshot of Foundry portal.](./media/ai-foundry-home.png)
 
 1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` model; which we'll use in our project.
-1. In the search results, select the **gpt-4o** model to see its details, and then at the top of the page for the model, select **Use this model**.
-1. When prompted to create a project, enter a valid name for your project and expand **Advanced options**.
-1. Select **Customize** and specify the following settings for your project:
-    - **Foundry resource**: *A valid name for your Foundry resource*
+1. In the search results, select the **gpt-4o** model to see its details, and then at the top of the page for the model, select **▶ Use this model**.
+1. When prompted to create a project, *select from the drop-down*  **+ Create a new project**
+1. Then specify the following settings for your project:
+    - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-studen15)**
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create or select a resource group*
-    - **Region**: *Select any **AI Foundry recommended***\*
+    - **Resource group**: *Select the resource group suggested.*
+    - **Region**: *Select  **East US2***\*
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
-1. Select **Create** and wait for your project, including the gpt-4o model deployment you selected, to be created.
+1. Select **Create and continue** and **wait for your project to be created**. If prompted, *Deploy gpt-4o* model. Then specify the following settings:
 
-    > <font color="red"><b>IMPORTANT</b>:</font> Depending on your available quota for gpt-4o models you might receive a additional prompt to deploy the model to a resource in a different region. If this happens, do so, using the default settings. Later in the exercise you will <b><u>not</u></b> be able to use the default project endpoint - you must use the model-specific target URI.
+    - From the *Deployment type* drop-down, select **Global standard**.
+    - In the **Deployment details** section, select **Customize**, then set the **Tokens per Minute Rate Limit** to **50K** (or the maximum available if it is less than 50K).
+    - Select **Create resource and deploy**.
 
-1. When your project is created, the chat playground will be opened automatically so you can test your model (if not, in the task pane on the left, select **Playgrounds** and then open the **Chat playground**).
-1. In the **Setup** pane, note the name of your model deployment; which should be **gpt-4o**. You can confirm this by viewing the deployment in the **Models and endpoints** page (just open that page in the navigation pane on the left).
+    > **Note**: Depending on your available quota for gpt-4o models you might receive a additional prompt to deploy the model to a resource in a different region. If this happens, do so, using the default settings. Later in the exercise you will <b><u>not</u></b> be able to use the default project endpoint - you must use the model-specific target URI.
+    {: .lab-note .info .compact}
+
+1. When your project is created, the chat playground will be opened automatically so you can test your model (*if not,* **in the task pane on the left**), select **Playgrounds**.
+
+1. In the **Chat playground** section, select **Try the Chat playground**, and ensure that your **gpt-4o** model deployment is selected in the **Deployment** section.
+
+1. In the **Setup** pane, note the name of your model deployment; which should be **gpt-4o**. You can confirm this by viewing the deployment in the **Models + endpoints** page (just open that page in the navigation pane on the left).
 
 ## Create a client application to chat with the model
 
@@ -54,17 +62,18 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 
 ### Prepare the application configuration
 
-1. In the Foundry portal, view the **Overview** page for your project.
-1. In the **Endpoints and keys** area, ensure that the **Foundry** library is selected and view the **Foundry project endpoint**. You'll use this endpoint to connect to your project and model in a client application.
+1. In the Foundry portal, in the **pane on the left**, select **Overview** for your project.
+
+1. In the **Endpoints and keys** area, ensure that the **Microsoft Foundry** library is selected and view the **Foundry project endpoint**. You'll use this endpoint to connect to your project and model in a client application.
 
     > **Note**: You can also use the Azure OpenAI endpoint!
     {: .lab-note .info .compact}
 
-1. Open a new browser tab (keeping the Foundry portal open in the existing tab). Then in the new tab, browse to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`; signing in with your Azure credentials if prompted.
+1. Open a new browser tab (keeping the Foundry portal open in the existing tab). Then in the new tab, browse to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`; **signing** in with your Azure credentials if prompted.
 
     Close any welcome notifications to see the Azure portal home page.
 
-1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment with no storage in your subscription.
+1. Use the **[\>_]** button to the **right of the search bar at the top of the page** to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment with no storage in your subscription.
 
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
@@ -75,7 +84,7 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 
     **<font color="red">Ensure you've switched to the classic version of the cloud shell before continuing.</font>**
 
-1. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the command, or copy it to the clipboard and then right-click in the command line and paste as plain text):
+1. In the cloud shell pane, **enter** the following **commands** to *clone the GitHub repo* containing the code files for this exercise (type the command, or copy it to the clipboard and then right-click in the command line and paste as plain text):
 
     ```
    rm -r mslearn-ai-foundry -f
@@ -85,23 +94,23 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
     > **Tip**: As you enter commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the `cls` command to make it easier to focus on each task.{: .lab-note .important .compact}
 
 
-1. After the repo has been cloned, navigate to the folder containing the chat application code files and view them:
+1. **After** the repo has been **cloned**, *navigate to the folder* containing the chat application code files and view them:
 
     ```
    cd mslearn-ai-foundry/labfiles/chat-app/python
    ls -a -l
     ```
 
-    The folder contains a code file as well as a configuration file for application settings and a file defining the project runtime and package requrirements.
+    The folder **contains a code file** as well as a configuration file for application settings and a file defining the project runtime and package requrirements.
 
-1. In the cloud shell command-line pane, enter the following command to install the libraries you'll use:
+1. In the cloud shell command-line pane, **enter the following command** to *install the libraries* you'll use:
 
     ```
    python -m venv labenv
    ./labenv/bin/Activate.ps1
    pip install -r requirements.txt azure-identity azure-ai-projects openai
     ```
-1. Enter the following command to edit the configuration file that has been provided:
+1. **Enter the following command** to edit the configuration file that has been provided:
 
     ```
    code .env
@@ -109,15 +118,16 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 
     The file is opened in a code editor.
 
-    > <font color="red"><b>IMPORTANT</b>:</font> If you deployed your gpt-4o model in the default region for your project, you can use the <b>Foundry project</b> or <b>Azure OpenAI</b> endpoint on the <b>Overview</b> page for your project to connect to your model. If you had insufficient quota and deployed the model to another region, on the <b>Models + Endpoints</b> page, select your model and use the <b>Target URI</b> for your model.
+    > <font color="red"><b>IMPORTANT</b>:</font>If you deployed your gpt-4o model in the default region for your project, you can use the <b>Foundry project</b> or <b>Azure OpenAI</b> endpoint on the <b>Overview</b> page for your project to connect to your model. If you had insufficient quota and deployed the model to another region, on the <b>Models + Endpoints</b> page, select your model and use the <b>Target URI</b> for your model.
+    
 
-1. In the code file, replace the **your_project_endpoint** placeholder with the appropriate endpoint for your model, and the **your_model_deployment** placeholder with the name assigned to your gpt-4o model deployment.
+1. In the code file, replace the **your_project_endpoint** placeholder with the appropriate endpoint for your model, and the **your_model_deployment** placeholder with the **name assigned** to your gpt-4o model deployment.
 1. After you've replaced the placeholders, within the code editor, use the **CTRL+S** command or **Right-click > Save** to save your changes and then use the **CTRL+Q** command or **Right-click > Quit** to close the code editor while keeping the cloud shell command line open.
 
 ### Write code to connect to your project and chat with your model
 
-> **Tip**: As you add code, be sure to maintain the correct indentation.{: .lab-note .important .compact}
-
+> **Tip**: As you add code, be sure to maintain the correct indentation.
+{: .lab-note .important .compact}
 
 1. Enter the following command to edit the code file that has been provided:
 
@@ -125,7 +135,7 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
    code chat-app.py
     ```
 
-1. In the code file, note the existing statements that have been added at the top of the file to import the necessary SDK namespaces. Then, find the comment **Add references**, and add the following code to reference the namespaces in the libraries you installed previously:
+1. In the **code file**, *note the existing statements* that have been added at the top of the file to import the necessary SDK namespaces. Then, **find** the comment **Add references**, and **add the following code** to reference the *namespaces* in the libraries you installed previously:
 
     ```python
    # Add references
@@ -134,11 +144,11 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
    from openai import AzureOpenAI
     ```
 
-1. In the **main** function, under the comment **Get configuration settings**, note that the code loads the project connection string and model deployment name values you defined in the configuration file.
-1. Find the comment **Initialize the project client**, and add the following code to connect to your Foundry project:
+1. In the **main** function, under the comment **Get configuration settings**, **note** that the *code loads the project connection string* and model deployment name values you **defined** in the configuration file.
+1. **Find** the comment **Initialize the project client**, and **add the following code** to connect to your Foundry project:
 
-    > **Tip**: Be careful to maintain the correct indentation level for your code. {: .lab-note .important .compact}
-
+    > **Tip**: Be careful to maintain the correct indentation level for your code.
+    {: .lab-note .important .compact}
 
     ```python
    # Initialize the project client
@@ -151,14 +161,14 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
         )
     ```
 
-1. Find the comment **Get a chat client**, and add the following code to create a client object for chatting with a model:
+1. **Find** the comment **Get a chat client**, and **add the following code** to create a client object for chatting with a model:
 
     ```python
    # Get a chat client
    openai_client = project_client.get_openai_client(api_version="2024-10-21")
     ```
 
-1. Find the comment **Initialize prompt with system message**, and add the following code to initialize a collection of messages with a system prompt.
+1. **Find** the comment **Initialize prompt with system message**, and **add the following code** to initialize a collection of messages with a system prompt.
 
     ```python
    # Initialize prompt with system message
@@ -167,7 +177,7 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
         ]
     ```
 
-1. Note that the code includes a loop to allow a user to input a prompt until they enter "quit". Then in the loop section, find the comment **Get a chat completion** and add the following code to add the user input to the prompt, retrieve the completion from your model, and add the completion to the prompt (so that you retain chat history for future iterations):
+1. **Note** that the code includes a loop to allow a user to input a prompt until they enter "quit". Then in the loop section, find the comment **Get a chat completion** and **add the following code** to add the user input to the prompt, retrieve the completion from your model, and *add the completion to the prompt* (so that you retain chat history for future iterations):
 
     ```python
    # Get a chat completion
@@ -184,7 +194,7 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 
 ### Sign into Azure and run the app
 
-1. In the cloud shell command-line pane, enter the following command to sign into Azure.
+1. In the **cloud shell** command-line pane, **enter the following command** to sign into Azure.
 
     ```
    az login
@@ -192,21 +202,22 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
 
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
-    > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.{: .lab-note .info .compact}
+    > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    {: .lab-note .info .compact}
     
-1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry hub if prompted.
-1. After you have signed in, enter the following command to run the application:
+1. When **prompted**, follow the instructions to open the **sign-in page** in a **new tab** and **enter the authentication code provided** and your Azure credentials. Then **complete** the *sign in proces*s in the command line, **selecting** the **subscription** containing your *Foundry hub if prompted*.
+1. **After** you have **signed** in, **enter the following command** to **run** the application:
 
     ```
    python chat-app.py
     ```
 
-1. When prompted, enter a question, such as `What is the fastest animal on Earth?` and review the response from your generative AI model.
+1. When prompted, **enter** a question, such as `What is the fastest animal on Earth?` and **review** the response from your generative AI model.
 1. Try some follow-up questions, like `Where can I see one?` or `Are they endangered?`. The conversation should continue, using the chat history as context for each iteration.
-1. When you're finished, enter `quit` to exit the program.
+1. When you're **finished**, enter `quit` to **exit** the program.
 
-> **Tip**: If the app fails because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.{: .lab-note .important .compact}
-
+> **Tip**: If the app fails because the rate limit is exceeded. Wait a few seconds and try again. If there is insufficient quota available in your subscription, the model may not be able to respond.
+{: .lab-note .important .compact}
 
 ## Summary
 
