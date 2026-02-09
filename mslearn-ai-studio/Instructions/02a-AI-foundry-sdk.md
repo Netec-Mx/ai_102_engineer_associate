@@ -177,7 +177,7 @@ Now that you have deployed a model, you can use the Foundry and Azure OpenAI SDK
         ]
     ```
 
-1. **Note** that the code includes a loop to allow a user to input a prompt until they enter "quit". Then in the loop section, find the comment **Get a chat completion** and **add the following code** to add the user input to the prompt, retrieve the completion from your model, and *add the completion to the prompt* (so that you retain chat history for future iterations):
+1. **Note** that the **code includes a loop** to allow a user to input a prompt until they enter "quit". Then in the loop section, **find** the comment **Get a chat completion** and **add the following code** to add the user input to the prompt, retrieve the completion from your model, and *add the completion to the prompt* (so that you retain chat history for future iterations):
 
     ```python
    # Get a chat completion
@@ -225,8 +225,8 @@ In this exercise, you used the Foundry SDK to create a client application for a 
 
 ## Clean up
 
-If you've finished exploring Foundry portal, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
+If you've **finished** exploring Foundry portal, you should **delete the resources** you have **created** in this exercise to avoid incurring unnecessary Azure costs.
 
-1. Open the [Azure portal](https://portal.azure.com) and view the contents of the resource group where you deployed the resources used in this exercise.
+1. Open the [Azure portal](https://portal.azure.com) and view the contents of the **resource group** where you **deployed** the resources used in this exercise.
 1. On the toolbar, select **Delete resource group**.
-1. Enter the resource group name and confirm that you want to delete it.
+1. **Enter** the **resource group** name and confirm that you want to **delete** it.
