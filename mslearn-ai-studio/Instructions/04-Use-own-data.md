@@ -33,12 +33,13 @@ The features of Foundry we're going to use in this exercise require a project th
     ![Screenshot of Foundry portal.](./media/ai-foundry-home.png)
 
 1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. Then choose the option  **AI hub resource** select **Next**.
-1. In the **Create a new project** wizard, enter a valid name for your project, Use this format: **ai102-labXY-stXY (e.g. ai102-lab03-studen15)** and select the option to **create a new hub**.
+1. In the **Create a new project** wizard, enter a valid name for your project, Use this format: **ai102-labXY-stXY (e.g. ai102-lab03-studen15)**.
 
-1. Use the **Rename hub** link to specify a valid name for your new hub,**hub-ai102-labXY-stXY** expand **Advanced options**, and specify the following settings for your project:
+1. Use the **Rename hub** link to specify a valid name for your new hub, **hub-ai102-labXY-stXY** expand **Advanced options**, and specify the following settings for your project:
+
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Select the resource group suggested.*
-    - **Region**:  North Central US  or Sweden Central (*In the event of a quota limit being exceeded later in the exercise, you may need to create another resource in a different region.*)
+    - **Region**:  Sweden Central or East US 2 (*In the event of a quota limit being exceeded later in the exercise, you may need to create another resource in a different region.*), 
 
     > **Note**: If you're working in an Azure subscription in which policies are used to restrict allowable resource names, you may need to use the link at the bottom of the **Create a new project** dialog box to create the hub using the Azure portal.
     {: .lab-note .info .compact}
@@ -58,7 +59,8 @@ You need two models to implement your solution:
 
 1. In your project **inside** the Foundry portal, select **Model catalog** from the **navigation** pane on the **left**.
 1. On the filter panel, select the **Collections ˅** and insert `Azure OpenAI` to filter by **OpenAI** collections only.
-1. Search for `text-embedding-ada-002`, select it, and then on the detail page select **▶ Use this model**. If a pop-up with purchase options appears, select the **Direct from Azure models** option. 
+1. Search for `text-embedding-ada-002`, select it, and then on the *detail* tab select **▶ Use this model**. If a pop-up with purchase options appears, select the **Direct from Azure models** option.
+
 1. Use the following settings by selecting **Customize** in the Deploy model wizard:
 
     - **Deployment name**: *A valid name for your model deployment*
@@ -74,7 +76,7 @@ You need two models to implement your solution:
     {: .lab-note .info .compact}
 
 
-1. Return to the **Models catalog** page and repeat the previous steps to deploy a **gpt-4o** model using a **Global Standard** deployment of the most recent version with a TPM rate limit of **50K** (or the maximum available in your subscription if less than 50K); for your model, you must use the Resource Location **East US 2**.
+1. Return to the **Models catalog** page and repeat the previous steps to deploy a **gpt-4o** model using a **Global Standard** deployment of the most recent version with a TPM rate limit of **50K** (or the maximum available in your subscription if less than 50K); for your model, you must use the Resource Location **Sweden Central**.
 
 
 
@@ -83,7 +85,7 @@ You need two models to implement your solution:
 
 ## Add data to your project
 
-The data for your app consists of a set of travel brochures in PDF format from the fictitious travel agency *Margie's Travel*. Let's add them to the project.
+The data for your app consists of a set of *travel brochures* in PDF format from the fictitious travel agency *Margie's Travel*. Let's add them to the project.
 
 1. In a new browser tab, download the [zipped archive of brochures](https://github.com/MicrosoftLearning/mslearn-ai-studio/raw/main/data/brochures.zip) from `https://github.com/MicrosoftLearning/mslearn-ai-studio/raw/main/data/brochures.zip` and extract it to a folder named **brochures** on your local file system.
 1. In Foundry portal, in your project, in the **navigation pane on the left**, under **My assets**, select the **Data + indexes** page.
@@ -104,24 +106,27 @@ Now that you've added a data source to your project, you can use it to create an
             - *Select the **brochures** data source*
             - Select the **Next** 
     - **Index configuration**:
-        - In the **Select Azure AI Search service** section, use the *Create a new Azure AI Search resource with the following settings* link to configure the service as follows:
+
+        - In the **Select Azure AI Search service** section, **use** the *Create a new Azure AI Search resource* **link** to configure the service as follows:
+
         
             - **Subscription**: *You Azure subscription*
             - **Resource group**: *The same resource group as your AI hub*
-            - **Service name**: *A valid name for your AI Search Resource*
+            - **Service name**: *A valid name for your AI Search resource*. This name is part of the service URL, so it must be **unique across all of Azure**.
             - **Location**: *The same location as your AI hub*
             - **Pricing tier**: Basic
             - Select **Review + create**, and then select **Create**.
 
             
-            **Wait** for the AI Search resource to be **created**. Then **return** to the Foundry and **finish** configuring the index by selecting **Connect other Azure AI Search resource** and **adding a connection** to the AI Search resource you just **created**.
+            **Wait** for the AI Search resource to be **created**. Then **return** to the Foundry and **finish** configuring the index by selecting **Connect other Azure AI Search resource** and then select **Add connection** button to the AI Search resource you just **created**.
  
-        - **Vector index**: rename to `brochure-index`
+        - **Vector index**: rename to `brochures-index`
         - **Virtual machine**: Auto select
         - Select **Next**.
 
     - In the **Configure search settings** section, configure the following:
-        - **Vector settings**: Add vector search to this search resource
+
+        - **Vector settings**: Select the checkbox to enable *Add vector search to this search resource*
         - **Azure OpenAI connection**: *Select the default Azure OpenAI resource for your hub.*
         - **Embedding model**: text-embedding-ada-002
         - **Embedding model deployment**: *Your deployment of the* text-embedding-ada-002 *model*
@@ -147,7 +152,7 @@ Before using your index in a RAG-based prompt flow, let's verify that it can be 
 1. In the **navigation pane on the left**, select the **Playgrounds** page and open the **Chat** playground.
 1. On the Chat playground page, in the Setup pane, ensure that your **gpt-4o** model deployment is selected. Then, in the main chat session panel, submit the prompt `Where can I stay in New York?`
 1. Review the response, which should be a generic answer from the model without any data from the index.
-1. In the Setup pane, expand the **Add your data** field, and then add the **brochures-index** project index and select the **hybrid (vector + keyword)** search type.
+1. In the Setup pane, expand the **Add your data** field, and then add the **brochure-index** project index and select the **hybrid (vector + keyword)** search type.
 
    > **Tip**: In some cases, newly created indexes may not be available right away. Refreshing the browser usually helps, but if you're still experiencing the issue where it can't find the index you may need to wait until the index is recognized.
     {: .lab-note .important .compact}
@@ -207,16 +212,36 @@ Now that you have a **working index**, you can use the Azure OpenAI SDK to imple
 
     The file is opened in a code editor.
 
-1. In the **configuration file**, **replace** the following placeholders: 
-    - **your_openai_endpoint**: The Open AI endpoint from your project's **Overview** page in the Foundry portal (be sure to select the **Azure OpenAI** capability tab).
-    - **your_openai_api_key** The Open AI API key from your project's **Overview** page in the Foundry portal (be sure to select the **Azure OpenAI** capability tab).
+1. In the **configuration file**, replace the following placeholders:
+
+    - **your_openai_endpoint**: To obtain the *Azure OpenAI endpoint*, go to the Foundry portal and select your project. 
+
+         - From the left-hand menu, select **Overview**.  
+
+         - In the **Endpoints and keys** section, expand the **Microsoft Foundry resource** drop-down and select your Azure OpenAI resource (do not select the AI Hub).  
+
+         - Under **Include capabilities**, select the **Azure OpenAI** tab and then **copy** the **Azure OpenAI endpoint**.
+        
+         - **your_openai_api_key**: From the same **Endpoints and keys** section and with the **Azure OpenAI** tab selected, **copy** the **API key**.
+        
+
     - **your_chat_model**: The name you assigned to your **gpt-4o** model deployment, from the **Models + endpoints** page in the Foundry portal (the default name is `gpt-4o`).
+
     - **your_embedding_model**: The name you assigned to your **text-embedding-ada-002** model deployment, from the **Models + endpoints** page in the Foundry portal (the default name is `text-embedding-ada-002`).
-    - **your_search_endpoint**: The URL for your Azure AI Search resource. You can find it in the **Management center** of the Foundry portal, under **Connected resources**, by selecting your **Azure AI Search** resource.
-    
-    - **your_search_api_key**: The API key for your Azure AI Search resource. You'll find this in the **Management center** in the Foundry portal, under **Connected resources**, by selecting your **Azure AI Search** resource.
+
+
+    - **your_search_endpoint**: The URL for your Azure AI Search resource.
+
+        - In the Foundry portal, **select** your project and, from the left-hand menu, go to **Management center**. 
+
+        - In the **Connected resources** section, *click* the Azure AI Search resource with the **service name** you **created**.
+        
+        - In **Connection Details**, go to **Target** and **copy the URL**.
+
+        - **your_search_api_key**: From the same **Service name** page, **copy** the **API key**.
 
     - **your_index**: Replace with your index name from the **Data + indexes** page for your project in the Foundry portal (it should be `brochures-index`).
+
 1. After you've replaced the placeholders, in the code editor, use the **CTRL+S** command or **Right-click > Save** to save your changes and then use the **CTRL+Q** command or **Right-click > Quit** to close the code editor while keeping the cloud shell command line open.
 
 ### Explore code to implement the RAG pattern
@@ -224,7 +249,7 @@ Now that you have a **working index**, you can use the Azure OpenAI SDK to imple
 1. **Enter the following command** to edit the **code file** that has been provided:
 
     ```
-   code rag-app.py
+   code rag-app.py 
     ```
 
 1. **Review the code** in the file, noting that it:

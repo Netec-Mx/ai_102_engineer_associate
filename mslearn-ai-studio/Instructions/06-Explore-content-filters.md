@@ -3,7 +3,7 @@ layout: lab
 lab:
     title: 'Apply content filters to prevent the output of harmful content'
     description: 'Learn how to apply content filters that mitigate potentially offensive or harmful output in your generative AI app.'
-prev: /mslearn-ai-studio/Instructions/04-Use-own-data      
+prev: /mslearn-ai-studio/Instructions/04-Use-own-data
 next: /mslearn-ai-studio/Instructions/07-Evaluate-prompt-flow
 ---
 
@@ -27,25 +27,37 @@ Let's start by deploying a model in a Foundry project.
     ![Screenshot of Foundry portal.](./media/ai-foundry-home.png)
 
 1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` model; which we'll use in our project.
-1. In the search results, select the **gpt-4o** model to see its details, and then at the top of the page for the model, select **Use this model**.
-1. When prompted to create a project, enter a valid name for your project and expand **Advanced options**.
-1. Select **Customize** and specify the following settings for your project:
-    - **Foundry resource**: *A valid name for your Foundry resource*
+1. In the search results, select the **gpt-4o** model to see its details, and then at the top of the page for the model, select **▶Use this model**.
+
+1. When prompted to create a project, *select from the drop-down*  **+ Create a new project**.
+
+1. Then specify the following settings for your project:
+    - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-studen15)**.
+
+1. Expand **Advanced options**.
+
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create or select a resource group*
+    - **Resource group**: *Select the resource group suggested.*
     - **Region**: *Select any **AI Foundry recommended***\*
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
-1. Select **Create** and wait for your project to be created. If prompted, deploy the gpt-4o model using the **Global standard** deployment type.
-1. When your model is deployed, it is shown in the playground.
-1. In the **Setup** pane, note the name of your model deployment; which should be **gpt-4o**.
+
+1. Select **Create and continue** and **wait for your project to be created**. If prompted, *Deploy gpt-4o* model. Then specify the following settings:
+
+    - From the *Deployment type* drop-down, select **Global standard**.
+    - In the **Deployment details** section, select **Customize**, then set the **Tokens per Minute Rate Limit** to **50K** (or the maximum available if it is less than 50K).
+    - Select **Deploy**.
 
 ## Chat using the content filter
 
 The model you deployed has a default content filter applied, which has a balanced set of filters that will disallow most harmful content while allowing input and output language considered reasonable safe.
 
-1. In the chat playground, ensure your gpt-4o model is selected.
+
+1. When your project is **created**, the chat playground will be opened automatically so you can test your model (*if not,* **in the task pane on the left**), select **Playgrounds**.
+
+1. In the **Chat playground** section, select **Try the Chat playground**, and ensure that your **gpt-4o** model deployment is selected in the **Deployment** section.
+
 1. Submit the following prompt and view the response:
 
     ```
@@ -79,8 +91,8 @@ When the default content filter doesn't meet your needs, you can create custom c
 
     You create and apply a content filter by providing details in a series of pages.
 
-1. On the **Basic information** page, provide a suitable name for your content filter
-1. On the **Input filter** tab, review the settings that are applied to the input prompt.
+1. On the **Add basic information** page, provide a suitable name for your content filter and then select **Next**.
+1. On the **Set input filter** tab, review the settings that are applied to the input prompt.
 
     Content filters are based on restrictions for four categories of potentially harmful content:
 
@@ -93,15 +105,17 @@ When the default content filter doesn't meet your needs, you can create custom c
 
     Additionally, *prompt shield* protections are provided to mitigate deliberate attempts to abuse your generative AI app.
 
-1. Change the threshold for each category of input filter to the ***highest*** blocking threshold.
+1. **Change** the threshold for each **category** of input filter to the highest* **Blocking threshold level** and then select **Next**.
 
-1. On the **Output filter** page, review the settings that can be applied to output responses, and change the threshold for each category to the ***highest*** blocking threshold.
+1. On the **Set output filter** page, review the settings that can be applied to output responses, and **change** the threshold for each category to the *highest* **Blocking threshold level** and then select **Next**.
 
-1. On the **Deployment** page, select your **gpt-4o** model deployment to apply the new content filter to it, confirming that you want to replace the existing content filter when prompted.
+1. On the **Apply filter to deployments** page, select your **gpt-4o** model deployment to apply the new content filter to it, and then select **Next**,  confirming that you want to replace the existing content filter when prompted.
 
-1. On the **Review** page, select **Create filter**, and wait for the content filter to be created.
+1. On the **Review your content filter configurations** page, select **Create filter**, and **wait** for the content filter to be created.
 
-1. Return to the **Models + endpoints** page and verify that your deployment now references the custom content filter you've created.
+1. In the pane on the left for your project, in the **My assets** section, select the **Models + endpoints** page.
+
+1. **Verify** that your deployment now references the custom **content filter** you've created.
 
 ## Test your custom content filter
 
@@ -109,6 +123,12 @@ Let's have one final chat with the model to see the effect of the custom content
 
 1. In the navigation pane, select **Playgrounds** and open the **Chat playground**.
 1. Ensure a new session has been started with your GPT-4o model.
+
+> **Note:** It is recommended that you **clear the chat history** by clicking the **brush icon** located in the center of your chat history.
+{: .lab-note .important .compact}
+
+
+
 1. Submit the following prompt and view the response:
 
     ```
@@ -139,10 +159,11 @@ In this exercise, you've explored content filters and the ways in which they can
 
 ## Clean up
 
-When you finish exploring the Foundry, you should delete the resources you’ve created to avoid unnecessary Azure costs.
+
+If you've **finished** exploring Foundry portal, **you should delete the resources you have created in this exercise** to avoid incurring unnecessary Azure costs.
 
 - Navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`.
 - In the Azure portal, on the **Home** page, select **Resource groups**.
-- Select the resource group that you created for this exercise.
+- **Select** the resource group that you **created** for this exercise.
 - At the top of the **Overview** page for your resource group, select **Delete resource group**.
 - Enter the resource group name to confirm you want to delete it, and select **Delete**.
