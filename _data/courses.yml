@@ -42,12 +42,12 @@ ai_102_engineer_associate:
       url:  "/mslearn-ai-agents/Instructions/03b-build-multi-agent-solution"
       duration: "30 min"
     - id: lab10
-      title: "Connect AI Agents to a remote MCP server "
+      title: "Connect AI agents to tools using Model Context Protocol (MCP) "
       url:  "/mslearn-ai-agents/Instructions/03c-use-agent-tools-with-mcp"
       duration: "30 min"
     - id: lab11
-      title: "Develop an Azure AI agent with the Semantic Kernel SDK"
-      url:  "/mslearn-ai-agents/Instructions/04-semantic-kernel"
+      title: "Develop a multi-agent solution"
+      url:  "/mslearn-ai-agents/Instructions/05-agent-orchestration"
       duration: "30 min"
     - id: lab12
       title: "Analyze text "

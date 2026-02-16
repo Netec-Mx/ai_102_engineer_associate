@@ -7,7 +7,8 @@ prev: /lab10/lab10/
 next: /lab2/lab2/
 ---
 
-# Develop a multi-agent solution
+# Lab11 Develop a multi-agent solution
+
 
 In this exercise, you'll practice using the sequential orchestration pattern in the Microsoft Agent Framework SDK. You'll create a simple pipeline of three agents that work together to process customer feedback and suggest next steps. You'll create the following agents:
 
@@ -20,43 +21,45 @@ You'll learn how to use the Microsoft Agent Framework SDK to break down a proble
 This exercise should take approximately **30** minutes to complete.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
-{: .lab-note .info .compact}
 
 ## Deploy a model in a Microsoft Foundry project
 
-Let's start by deploying a model in a Foundry project.
+Let's start by creating a Foundry project.
 
 1. In a web browser, open the [Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Foundry portal.](./Media/ai-foundry-home.png)
+    ![Screenshot of Foundry portal.](./Media/ai-foundry-home-new.png)
 
-    > **Important**: Make sure the **New Foundry** toggle is *Off* for this lab.
-
-1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` model; which we'll use in our project.
-1. In the search results, select the **gpt-4o** model to see its details, and then at the top of the page for the model, select **Use this model**.
-1. When prompted to create a project, enter a valid name for your project and expand **Advanced options**.
-1. Confirm the following settings for your project:
+    > **Important**: For this lab, you're using the **New** Foundry experience.
+1. In the top banner, select **Start building** to try the new Microsoft Foundry Experience.
+1. When prompted, create a **new** project, and enter a valid name for your project.
+1. Expand **Advanced options** and specify the following settings:
     - **Foundry resource**: *A valid name for your Foundry resource*
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create or select a resource group*
-    - **Region**: *Select any **AI Foundry recommended***\*
+    - **Resource group**: *Select your resource group, or create a new one*
+    - **Region**: *Select any **AI Foundry recommended***\**
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
-1. Select **Create** and wait for your project, including the gpt-4 model deployment you selected, to be created.
+1. Select **Create** and wait for your project to be created.
 
-1. When your project is created, the chat playground will be opened automatically.
+1. After your project is created, select **Build** from the navigation bar.
 
-1. In the navigation pane on the left, select **Models and endpoints** and select your **gpt-4o** deployment.
+1. Select **Models** from the left-hand menu, and then select **Deploy a base model**.
 
-1. In the **Setup** pane, note the name of your model deployment; which should be **gpt-4o**. You can confirm this by viewing the deployment in the **Models and endpoints** page (just open that page in the navigation pane on the left).
-1. In the navigation pane on the left, select **Overview** to see the main page for your project; which looks like this:
+1. Enter **gpt-4.1** in the search box, and then select the **gpt-4.1** model from the search results.
 
-    ![Screenshot of a Azure AI project details in Foundry portal.](./Media/ai-foundry-project.png)
+1. Select **Deploy** with the default settings to create a deployment of the model.
+
+    After the model is deployed, the playground for the model is displayed.
+
+1. In the navigation bar on the left, select **Microsoft Foundry** to return to the Foundry home page.
+
+1. Copy the **Project endpoint** value to a notepad, as you'll use them to connect to your project in a client application.
 
 ## Create an AI Agent client app
 
-Now you're ready to create a client app that defines an agent and a custom function. Some code is provided for you in a GitHub repository.
+Now you're ready to create a client app that uses the Microsoft Agent Framework SDK to implement your multi-agent solution.
 
 ### Prepare the environment
 
@@ -69,7 +72,6 @@ Now you're ready to create a client app that defines an agent and a custom funct
     The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, switch it to ***PowerShell***.
-    {: .lab-note .info .compact}
 
 1. In the cloud shell toolbar, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
 
@@ -83,7 +85,6 @@ Now you're ready to create a client app that defines an agent and a custom funct
     ```
 
     > **Tip**: As you enter commands into the cloud shell, the output may take up a large amount of the screen buffer and the cursor on the current line may be obscured. You can clear the screen by entering the `cls` command to make it easier to focus on each task.
-    {: .lab-note .important .compact}
 
 1. When the repo has been cloned, enter the following command to change the working directory to the folder containing the code files and list them all.
 
@@ -101,7 +102,7 @@ Now you're ready to create a client app that defines an agent and a custom funct
     ```
    python -m venv labenv
    ./labenv/bin/Activate.ps1
-   pip install azure-identity agent-framework
+   pip install agent-framework==1.0.0b260128 --pre
     ```
 
 1. Enter the following command to edit the configuration file that is provided:
@@ -112,7 +113,7 @@ Now you're ready to create a client app that defines an agent and a custom funct
 
     The file is opened in a code editor.
 
-1. In the code file, replace the **your_openai_endpoint** placeholder with the endpoint for your project (copied from the project **Overview** page in the Foundry portal). Replace the **your_model_deployment** placeholder with the name you assigned to your gpt-4o model deployment.
+1. In the code file, replace the **your_project_endpoint** placeholder with the endpoint for your project (copied from the project **Overview** page in the Foundry portal) and ensure that the AZURE_AI_MODEL_DEPLOYMENT_NAME variable is set to your model deployment name (which should be *gpt-4.1*).
 
 1. After you've replaced the placeholders, use the **CTRL+S** command to save your changes and then use the **CTRL+Q** command to close the code editor while keeping the cloud shell command line open.
 
@@ -145,7 +146,7 @@ Now you're ready to create the agents for your multi-agent solution! Let's get s
    # Create the chat client
    credential = AzureCliCredential()
    async with (
-       AzureAIAgentClient(async_credential=credential) as chat_client,
+       AzureAIAgentClient(credential=credential) as chat_client,
    ):
     ```
 
@@ -157,17 +158,17 @@ Now you're ready to create the agents for your multi-agent solution! Let's get s
 
     ```python
    # Create agents
-   summarizer = chat_client.create_agent(
+   summarizer = chat_client.as_agent(
        instructions=summarizer_instructions,
        name="summarizer",
    )
 
-   classifier = chat_client.create_agent(
+   classifier = chat_client.as_agent(
        instructions=classifier_instructions,
        name="classifier",
    )
 
-   action = chat_client.create_agent(
+   action = chat_client.as_agent(
        instructions=action_instructions,
        name="action",
    )
@@ -236,7 +237,6 @@ Now you're ready to run your code and watch your AI agents collaborate.
     **<font color="red">You must sign into Azure - even though the cloud shell session is already authenticated.</font>**
 
     > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
-    {: .lab-note .info .compact}
 
 1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry hub if prompted.
 
