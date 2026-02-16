@@ -22,7 +22,7 @@ Let's start by creating a Foundry project.
 
 1. In a web browser, open the [Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Foundry portal.](./Media/ai-foundry-home-new.png)
+    ![Screenshot of Foundry portal.](./media/ai-foundry-home.png)
 
     > **Important**: For this lab, you're using the **New** Foundry experience.
 
