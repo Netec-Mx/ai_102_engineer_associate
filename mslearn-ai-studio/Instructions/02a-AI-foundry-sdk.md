@@ -36,8 +36,8 @@ Let's start by deploying a model in a Foundry project.
 1. Then specify the following settings for your project:
     - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-studen15)**
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Select the resource group suggested.*
-    - **Region**: *Select  **East US2***\*
+    - **Resource group**: *Select the resource group ai102-lab-stXY.*
+    - **Region**: *Select  **Sweden Central***\*
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
@@ -227,8 +227,16 @@ In this exercise, you used the Foundry SDK to create a client application for a 
 
 If you've **finished** exploring Foundry portal, **you should delete the resources you have created in this exercise** to avoid incurring unnecessary Azure costs.
 
+
+## Delete Only the Resources Inside a Resource Group in Azure
+
+> ⚠️ These steps delete **only the resources**, but keep the **resource group**.
+
 - Navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`.
 - In the Azure portal, on the **Home** page, select **Resource groups**.
 - **Select** the resource group that you **created** for this exercise.
-- At the top of the **Overview** page for your resource group, select **Delete resource group**.
-- Enter the resource group name to confirm you want to delete it, and select **Delete**.
+- On the **Overview** page, go to the **Resources** list.
+- Select the **checkbox** next to each resource you want to delete.
+- At the top of the resource list, select **Delete**.
+- When prompted, type **yes** or the resource name to confirm.
+- Select **Delete** to remove the selected resources.

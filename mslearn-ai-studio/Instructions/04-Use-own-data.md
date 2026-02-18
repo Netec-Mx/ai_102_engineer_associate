@@ -38,8 +38,8 @@ The features of Foundry we're going to use in this exercise require a project th
 1. Use the **Rename hub** link to specify a valid name for your new hub, **hub-ai102-labXY-stXY** expand **Advanced options**, and specify the following settings for your project:
 
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Select the resource group suggested.*
-    - **Region**:  Sweden Central or East US 2 (*In the event of a quota limit being exceeded later in the exercise, you may need to create another resource in a different region.*), 
+    - **Resource group**: *Select the resource group ai102-lab-stXY.*
+    - **Region**:  Sweden Central  (*In the event of a quota limit being exceeded later in the exercise, you may need to create another resource in a different region.*), 
 
     > **Note**: If you're working in an Azure subscription in which policies are used to restrict allowable resource names, you may need to use the link at the bottom of the **Create a new project** dialog box to create the hub using the Azure portal.
     {: .lab-note .info .compact}
@@ -283,6 +283,20 @@ Now that you have a **working index**, you can use the Azure OpenAI SDK to imple
 
 ## Clean up
 
-To avoid unnecessary Azure costs and resource utilization, you should **remove the resources** you **deployed** in this exercise.
+## Clean up
 
-1. If you've **finished** exploring Foundry, **return** to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com` and sign in using your Azure credentials if necessary. Then **delete the resources** in the **resource group** where you **provisioned** your Azure AI Search and Azure AI resources.
+If you've **finished** exploring Foundry portal, **you should delete the resources you have created in this exercise** to avoid incurring unnecessary Azure costs.
+
+
+## Delete Only the Resources Inside a Resource Group in Azure
+
+> ⚠️ These steps delete **only the resources**, but keep the **resource group**.
+
+- Navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`.
+- In the Azure portal, on the **Home** page, select **Resource groups**.
+- **Select** the resource group that you **created** for this exercise.
+- On the **Overview** page, go to the **Resources** list.
+- Select the **checkbox** next to each resource you want to delete.
+- At the top of the resource list, select **Delete**.
+- When prompted, type **yes** or the resource name to confirm.
+- Select **Delete** to remove the selected resources.
