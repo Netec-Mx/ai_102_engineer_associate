@@ -39,8 +39,8 @@ An Azure AI *project* provides a collaborative workspace for AI development. Let
 1. Then specify the following settings for your project:
     - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-studen15)**
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Select the resource group suggested.*
-    - **Region**: *Select  **East US2***\*
+    - **Resource group**: *Select the resource group ai102-lab-stXY.*
+    - **Region**: *Select  **Sweden Central***\*
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
