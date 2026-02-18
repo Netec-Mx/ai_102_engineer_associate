@@ -185,4 +185,4 @@ If you've **finished** exploring Foundry portal, **you should delete the resourc
 - Select the **checkbox** next to each resource you want to delete.
 - At the top of the resource list, select **Delete**.
 - When prompted, type **yes** or the resource name to confirm.
-- Select **Delete** to remove the selected resources.
+- Select **Delete** to remove the selected resources
