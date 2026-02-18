@@ -14,7 +14,10 @@ In this exercise, you'll practice using the sequential orchestration pattern in 
 
 - The Summarizer agent will condense raw feedback into a short, neutral sentence.
 - The Classifier agent will categorize the feedback as Positive, Negative, or a Feature request.
-- Finally, the Recommended Action agent will recommend an appropriate follow-up step.
+- Finally, the
+
+
+  Recommended Action agent will recommend an appropriate follow-up step.
 
 You'll learn how to use the Microsoft Agent Framework SDK to break down a problem, route it through the right agents, and produce actionable results. Let's get started!
 
