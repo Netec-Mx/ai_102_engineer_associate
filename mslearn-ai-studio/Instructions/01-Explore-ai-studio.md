@@ -117,8 +117,19 @@ In this exercise, **you've explored Foundry**, and seen how to create and manage
 
 If you've **finished** exploring Foundry portal, **you should delete the resources you have created in this exercise** to avoid incurring unnecessary Azure costs.
 
+
+## Delete Only the Resources Inside a Resource Group in Azure
+
+> ⚠️ These steps delete **only the resources**, but keep the **resource group**.
+
 - Navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`.
 - In the Azure portal, on the **Home** page, select **Resource groups**.
 - **Select** the resource group that you **created** for this exercise.
-- At the top of the **Overview** page for your resource group, select **Delete resource group**.
-- Enter the resource group name to confirm you want to delete it, and select **Delete**.
+- On the **Overview** page, go to the **Resources** list.
+- Select the **checkbox** next to each resource you want to delete.
+- At the top of the resource list, select **Delete**.
+- When prompted, type **yes** or the resource name to confirm.
+- Select **Delete** to remove the selected resources.
+
+
+
