@@ -39,7 +39,7 @@ The features of Foundry we're going to use in this exercise require a project th
 
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Select the resource group ai102-lab-stXY.*
-    - **Region**:  Sweden Central  (*In the event of a quota limit being exceeded later in the exercise, you may need to create another resource in a different region.*), 
+    - **Region**:  East US  (*In the event of a quota limit being exceeded later in the exercise, you may need to create another resource in a different region.*), 
 
     > **Note**: If you're working in an Azure subscription in which policies are used to restrict allowable resource names, you may need to use the link at the bottom of the **Create a new project** dialog box to create the hub using the Azure portal.
     {: .lab-note .info .compact}
@@ -67,7 +67,7 @@ You need two models to implement your solution:
     - **Deployment type**: Global Standard
     - **Model version**: *Select the default version*
     - **Connected AI resource**: *Select the resource created previously*
-    - **Tokens per Minute Rate Limit (thousands)**: 50K *(or the maximum available in your subscription if less than 50K)*
+    - **Tokens per Minute Rate Limit (thousands)**: 10K *(or the maximum available in your subscription if less than 10K)*
     - **Content filter**: DefaultV2
 
 1. Select **Deploy**.
@@ -76,11 +76,11 @@ You need two models to implement your solution:
     {: .lab-note .info .compact}
 
 
-1. Return to the **Models catalog** page and repeat the previous steps to deploy a **gpt-4o** model using a **Global Standard** deployment of the most recent version with a TPM rate limit of **50K** (or the maximum available in your subscription if less than 50K); for your model, you must use the Resource Location **Sweden Central**.
+1. Return to the **Models catalog** page and repeat the previous steps to deploy a **gpt-4o** model using a **Global Standard** deployment of the most recent version with a TPM rate limit of **10K** (or the maximum available in your subscription if less than 10K); for your model, you must use the Resource Location **Sweden Central**.
 
 
 
-    > **Note**: Reducing the Tokens Per Minute (TPM) helps avoid over-using the quota available in the subscription you are using. 50,000 TPM is sufficient for the data used in this exercise.
+    > **Note**: Reducing the Tokens Per Minute (TPM) helps avoid over-using the quota available in the subscription you are using. 10,000 TPM is sufficient for the data used in this exercise.
     {: .lab-note .info .compact}
 
 ## Add data to your project
