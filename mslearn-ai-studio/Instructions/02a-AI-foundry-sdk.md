@@ -37,14 +37,14 @@ Let's start by deploying a model in a Foundry project.
     - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-studen15)**
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Select the resource group ai102-lab-stXY.*
-    - **Region**: *Select  **Sweden Central***\*
+    - **Region**: *Select  **East US ***\*
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
 1. Select **Create and continue** and **wait for your project to be created**. If prompted, *Deploy gpt-4o* model. Then specify the following settings:
 
     - From the *Deployment type* drop-down, select **Global standard**.
-    - In the **Deployment details** section, select **Customize**, then set the **Tokens per Minute Rate Limit** to **50K** (or the maximum available if it is less than 50K).
+    - In the **Deployment details** section, select **Customize**, then set the **Tokens per Minute Rate Limit** to **10K** (or the maximum available if it is less than 10K).
     - Select **Create resource and deploy**.
 
     > **Note**: Depending on your available quota for gpt-4o models you might receive a additional prompt to deploy the model to a resource in a different region. If this happens, do so, using the default settings. Later in the exercise you will <b><u>not</u></b> be able to use the default project endpoint - you must use the model-specific target URI.
