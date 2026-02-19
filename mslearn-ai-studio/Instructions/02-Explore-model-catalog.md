@@ -74,18 +74,18 @@ To use a model, you need to create a Foundry *project*.
 1. At the top of the **gpt-4o** model overview page, select **▶ Use this model**.
 1. When prompted to create a project, *select from the drop-down*  **+ Create a new project**
 1. Then specify the following settings for your project:
-    - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-studen15)**
+    - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-student15)**
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Select the resource group ai102-lab-stXY*
-    - **Region**: *Select  **Sweden Central***\*
+    - **Region**: *Select  **East US***\*
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
 1. Select **Create and continue** and **wait for your project to be created**. If prompted, *Deploy gpt-4o* model. Then specify the following settings:
 
     - From the *Deployment type* drop-down, select **Global standard**.
-    - In the **Deployment details** section, select **Customize**, then set the **Tokens per Minute Rate Limit** to **50K** (or the maximum available if it is less than 50K).
-    - Select **Create resource and deploy**.
+    - In the **Deployment details** section, select **Customize**, then set the **Tokens per Minute Rate Limit** to **10K** (or the maximum available if it is less than 50K).
+    - Select **Deploy** button.
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may experience errors if the rate limit is exceeded.
     {: .lab-note .info .compact}
