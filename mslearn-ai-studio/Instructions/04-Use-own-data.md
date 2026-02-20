@@ -33,7 +33,7 @@ The features of Foundry we're going to use in this exercise require a project th
     ![Screenshot of Foundry portal.](./media/ai-foundry-home.png)
 
 1. In the browser, navigate to `https://ai.azure.com/managementCenter/allResources` and select **Create new**. Then choose the option  **AI hub resource** select **Next**.
-1. In the **Create a new project** wizard, enter a valid name for your project, Use this format: **ai102-labXY-stXY (e.g. ai102-lab03-studen15)**.
+1. In the **Create a new project** wizard, enter a valid name for your project, Use this format: **ai102-labXY-stXY (e.g. ai102-lab03-student15)**.
 
 1. Use the **Rename hub** link to specify a valid name for your new hub, **hub-ai102-labXY-stXY** expand **Advanced options**, and specify the following settings for your project:
 
@@ -76,8 +76,7 @@ You need two models to implement your solution:
     {: .lab-note .info .compact}
 
 
-1. Return to the **Models catalog** page and repeat the previous steps to deploy a **gpt-4o** model using a **Global Standard** deployment of the most recent version with a TPM rate limit of **10K** (or the maximum available in your subscription if less than 10K); for your model, you must use the Resource Location **Sweden Central**.
-
+1. Return to the **Models catalog** page and repeat the previous steps to deploy a **gpt-4o** model using a **Global Standard** deployment of the most recent version with a TPM rate limit of **10K** (or the maximum available in your subscription if less than 10K); for your model, you must use the Resource Location **East US**.
 
 
     > **Note**: Reducing the Tokens Per Minute (TPM) helps avoid over-using the quota available in the subscription you are using. 10,000 TPM is sufficient for the data used in this exercise.
@@ -95,9 +94,50 @@ The data for your app consists of a set of *travel brochures* in PDF format from
 1. Select **Next** and set the data name to `brochures` and then select **Create**.
 1. **Wait** for the folder to be uploaded and note that it contains several .pdf files.
 
-## Create an index for your data
+
+# Create an index for your data
 
 Now that you've added a data source to your project, you can use it to create an index in your Azure AI Search resource.
+
+## Create the Azure AI Search resource using PowerShell
+
+1. **Open a new browser** tab, go to the Azure portal at https://portal.azure.com, and keep the Foundry portal open in the current tab.
+
+1. Use the **[\>_]** button to the **right of the search bar** at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment with no storage in your subscription.
+
+    The **cloud shell** provides a command-line interface in a pane at the bottom of the Azure portal. You can resize or maximize this pane to make it easier to work in.
+
+    > **Note**: Make sure your Cloud Shell environment is set to **Bash** before running the following Azure CLI command.
+    {: .lab-note .info .compact}
+
+1. In the cloud shell **toolbar**, in the **Settings** menu, select **Go to Classic version** (this is required to use the code editor).
+
+    **<font color="red">Ensure you've switched to the classic version of the cloud shell before continuing.</font>**
+
+
+Instead of creating the Azure AI Search resource from the Foundry portal interface, create it first using Azure CLI in Cloud Shell.
+
+Run the following command:
+
+    az search service create \
+    --name "<SEARCH_SERVICE_NAME>" \
+    --resource-group "<ai102-lab-stXY>" \
+    --sku basic \
+    --location <LOCATION> \
+    --partition-count 1 \
+    --replica-count 1
+
+
+
+Replace the following values before running the command:
+
+- `<ai102-lab-stXY>` → The same resource group as your AI hub  
+- `<SEARCH_SERVICE_NAME>` → A globally unique name for your Azure AI Search resource  
+- `<LOCATION>` → The same location as your AI hub (for example: `eastus`)  
+
+
+**Wait** for the deployment to complete **before** continuing.
+
 
 1. In Foundry portal, in your project, **in the navigation pane on the left**, under **My assets**, select the **Data + indexes** page.
 1. In the **Indexes** tab, **add a new index** with the following settings:
@@ -107,22 +147,12 @@ Now that you've added a data source to your project, you can use it to create an
             - Select the **Next** 
     - **Index configuration**:
 
-        - In the **Select Azure AI Search service** section, **use** the *Create a new Azure AI Search resource* **link** to configure the service as follows:
+        - In the **Select Azure AI Search service** drop-down menu, select **Connect other Azure AI Search resource**. Then configure the service as follows:
 
-        
-            - **Subscription**: *You Azure subscription*
-            - **Resource group**: *The same resource group as your AI hub*
-            - **Service name**: *A valid name for your AI Search resource*. This name is part of the service URL, so it must be **unique across all of Azure**.
-            - **Location**: *The same location as your AI hub*
-            - **Pricing tier**: Basic
-            - Select **Review + create**, and then select **Create**.
-
-            
-            **Wait** for the AI Search resource to be **created**. Then **return** to the Foundry and **finish** configuring the index by selecting **Connect other Azure AI Search resource** and then select **Add connection** button to the AI Search resource you just **created**.
- 
-        - **Vector index**: rename to `brochures-index`
-        - **Virtual machine**: Auto select
-        - Select **Next**.
+            - Select **Add connection** button.
+            - Select the Azure AI Search service you created using Azure CLI.
+            - **Vector index**: rename to `brochures-index`
+            - **Virtual machine**: Auto select  Select **Next**.
 
     - In the **Configure search settings** section, configure the following:
 
@@ -218,13 +248,10 @@ Now that you have a **working index**, you can use the Azure OpenAI SDK to imple
 
          - From the left-hand menu, select **Overview**.  
 
-         - In the **Endpoints and keys** section, expand the **Microsoft Foundry resource** drop-down and select your Azure OpenAI resource (do not select the AI Hub).  
-
-         - Under **Include capabilities**, select the **Azure OpenAI** tab and then **copy** the **Azure OpenAI endpoint**.
-        
+        - In the **Endpoints and keys** section, under **Include capabilities**, select the **Azure OpenAI** tab, and then copy the **Azure OpenAI endpoint**.
+  
          - **your_openai_api_key**: From the same **Endpoints and keys** section and with the **Azure OpenAI** tab selected, **copy** the **API key**.
         
-
     - **your_chat_model**: The name you assigned to your **gpt-4o** model deployment, from the **Models + endpoints** page in the Foundry portal (the default name is `gpt-4o`).
 
     - **your_embedding_model**: The name you assigned to your **text-embedding-ada-002** model deployment, from the **Models + endpoints** page in the Foundry portal (the default name is `text-embedding-ada-002`).
@@ -280,8 +307,6 @@ Now that you have a **working index**, you can use the Azure OpenAI SDK to imple
 1. Try a follow-up question, for example `Where can I stay there?`
 
 1. When you're **finished**, enter `quit` to exit the program. Then **close** the cloud shell pane.
-
-## Clean up
 
 ## Clean up
 
