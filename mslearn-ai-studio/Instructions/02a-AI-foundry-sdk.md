@@ -34,10 +34,10 @@ Let's start by deploying a model in a Foundry project.
 1. In the search results, select the **gpt-4o** model to see its details, and then at the top of the page for the model, select **▶ Use this model**.
 1. When prompted to create a project, *select from the drop-down*  **+ Create a new project**
 1. Then specify the following settings for your project:
-    - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-studen15)**
+    - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-student15)**
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Select the resource group ai102-lab-stXY.*
-    - **Region**: *Select  **East US ***\*
+    - **Resource group**: *Select the suggested resource group*
+    - **Region**: *Select the suggested region*
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 

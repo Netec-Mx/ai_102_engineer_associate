@@ -76,8 +76,8 @@ To use a model, you need to create a Foundry *project*.
 1. Then specify the following settings for your project:
     - **Project**: **enter a valid name Use this format: ai102-labXY-stXY (e.g. ai102-lab03-student15)**
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Select the resource group ai102-lab-stXY*
-    - **Region**: *Select  **East US***\*
+    - **Resource group**: *Select the suggested resource group*
+    - **Region**: *Select the suggested region*
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
