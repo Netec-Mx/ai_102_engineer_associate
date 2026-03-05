@@ -38,7 +38,7 @@ Let's start by deploying a model in a Foundry project.
 
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Select the resource group ai102-lab-stXY.*
-    - **Region**: *Select  **Sweden Central***\*
+    - **Region**: *Select the suggested region*
 
     > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
